@@ -1,0 +1,2649 @@
+Last login: Thu Apr 11 11:21:15 on ttys012
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AS-AST-318-ecg224:~ eileengonzales$ ssh 912032971@n1.hpc.at.sfsu.edu
+^C
+(base) AS-AST-318-ecg224:~ eileengonzales$ ssh 912032971@n1.hpc.at.sfsu.edu
+The authenticity of host 'n1.hpc.at.sfsu.edu (130.212.15.150)' can't be established.
+ED25519 key fingerprint is SHA256:ehyG5MuDUNpreyMCQrKCUIv5Cw3H6kJX1AwTofTE7IU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'n1.hpc.at.sfsu.edu' (ED25519) to the list of known hosts.
+912032971@n1.hpc.at.sfsu.edu's password:
+Activate the web console with: systemctl enable --now cockpit.socket
+
+[912032971@n1 ~]$ ls
+[912032971@n1 ~]$ pwd
+/Users/912032971
+[912032971@n1 ~]$ module list
+No Modulefiles Currently Loaded.
+[912032971@n1 ~]$ module avail
+---------------------------------------------------- /usr/share/Modules/modulefiles -----------------------------------------------------
+dot  hmpt/2.28  module-git  module-info  modules  MPInside/4.2.57  mpiplace/2.00  mpt/2.28  null  perfboost  use.own
+
+-------------------------------------------------------- /usr/share/modulefiles ---------------------------------------------------------
+pmi/pmix-x86_64
+[912032971@n1 ~]$ module availclient_loop: send disconnect: Broken pipe
+(base) AS-AST-318-ecg224:~ eileengonzales$
+  [Restored May 14, 2024 at 11:59:50 AM]
+Last login: Tue May 14 11:59:42 on console
+Restored session: Tue May 14 11:59:24 PDT 2024
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AS-AST-318-ecg224:~ eileengonzales$ ssh 912032971@n1.hpc.at.sfsu.edu
+912032971@n1.hpc.at.sfsu.edu's password:
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Fri May  3 12:56:53 2024 from 130.212.137.235
+[912032971@n1 ~]$ which python
+/usr/bin/which: no python in (/Users/912032971/.local/bin:/Users/912032971/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/sbin:/bin)
+[912032971@n1 ~]$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+--2024-05-31 12:54:34--  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.191.158, 104.16.32.241, 2606:4700::6810:bf9e, ...
+Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.191.158|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 143808873 (137M) [application/octet-stream]
+Saving to: ‘Miniconda3-latest-Linux-x86_64.sh’
+
+Miniconda3-latest-Linux-x86_64.sh  100%[=============================================================>] 137.15M   106MB/s    in 1.3s
+
+2024-05-31 12:54:37 (106 MB/s) - ‘Miniconda3-latest-Linux-x86_64.sh’ saved [143808873/143808873]
+
+[912032971@n1 ~]$ bash Miniconda3-latest-Linux-x86_64.sh 
+bash: bash Miniconda3-latest-Linux-x86_64.sh : command not found...
+[912032971@n1 ~]$ $TERM
+bash: xterm-256color: command not found...
+[912032971@n1 ~]$ ls
+Miniconda3-latest-Linux-x86_64.sh
+[912032971@n1 ~]$ bash Miniconda3-latest-Linux-x86_64.sh 
+bash: bash Miniconda3-latest-Linux-x86_64.sh : command not found...
+[912032971@n1 ~]$ sh Miniconda3-latest-Linux-x86_64.sh 
+bash: sh Miniconda3-latest-Linux-x86_64.sh : command not found...
+[912032971@n1 ~]$ chmod +x Miniconda3-latest-Linux-x86_64.sh && ./Miniconda3-latest-Linux-x86_64.sh
+
+Welcome to Miniconda3 py312_24.4.0-0
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>>
+END USER LICENSE AGREEMENT
+
+Please read these Terms of Service carefully before purchasing, using, accessing, or downloading any Anaconda Offerings (the "Offerings")
+. These Anaconda Terms of Service ("TOS") are between Anaconda, Inc. ("Anaconda") and you ("You"), the individual or entity acquiring and
+/or providing access to the Offerings. These TOS govern Your access, download, installation, or use of the Anaconda Offerings, which are
+provided to You in combination with the terms set forth in the applicable Offering Description, and are hereby incorporated into these TO
+S. Except where indicated otherwise, references to "You" shall include Your Users. You hereby acknowledge that these TOS are binding, and
+ You affirm and signify your consent to these TOS by registering to, using, installing, downloading, or accessing the Anaconda Offerings
+effective as of the date of first registration, use, install, download or access, as applicable (the "Effective Date"). Capitalized defin
+itions not otherwise defined herein are set forth in Section 15 (Definitions). If You do not agree to these Terms of Service, You must no
+t register, use, install, download, or access the Anaconda Offerings.
+
+
+1. ACCESS & USE.
+   1. General License Grant. Subject to compliance with these TOS and any applicable Offering Description, Anaconda grants You a personal
+, non-exclusive, non-transferable, non-sublicensable, revocable, limited right to use the applicable Anaconda Offering strictly as detail
+ed herein and as set forth in a relevant Offering Description. If You purchase a subscription to an Offering as set forth in a relevant O
+rder, then the license grant(s) applicable to your access, download, installation, or use of a specific Anaconda Offering will be set for
+th in the relevant Offering Description and any definitive agreement which may be executed by you in writing or electronic in connection
+with your Order ("Custom Agreement"). License grants for specific Anaconda Offerings are set forth in the relevant Offering Description,
+if applicable.
+   2. License Restrictions. Unless expressly agreed by Anaconda, You may not:  (a) Make, sell, resell, license, sublicense, distribute, r
+ent, or lease any Offerings available to anyone other than You or Your Users, unless expressly stated otherwise in an Order, Custom Agree
+ment or the Documentation or as otherwise expressly permitted in writing by Anaconda; (b) Use the Offerings to store or transmit infringi
+ng, libelous, or otherwise unlawful or tortious material, or to store or transmit material in violation of third-party privacy rights; (c
+) Use the Offerings or Third Party Services to store or transmit Malicious Code, or attempt to gain unauthorized access to any Offerings
+or Third Party Services or their related systems or networks; (d)Interfere with or disrupt the integrity or performance of any Offerings
+or Third Party Services, or third-party data contained therein; (e) Permit direct or indirect access to or use of any Offerings or Third
+Party Services in a way that circumvents a contractual usage limit, or use any Offerings to access, copy or use any Anaconda intellectual
+ property except as permitted under these TOS, a Custom Agreement, an Order or the Documentation; (f) Modify, copy or create derivative w
+orks of the Offerings or any part, feature, function or user interface thereof except, and then solely to the extent that, such activity
+is required to be permitted under applicable law; (g) Copy Content except as permitted herein or in an Order, a Custom Agreement or the D
+ocumentation or republish any material portion of any Offering in a manner competitive with the offering by Anaconda, including republica
+tion on another website or redistribute or embed any or all Offerings in a commercial product for redistribution or resale; (h) Frame or
+Mirror any part of any Content or Offerings, except if and to the extent permitted in an applicable Custom Agreement or Order for your ow
+n Internal Use and as permitted in a Custom Agreement or Documentation; (i) Except and then solely to the extent required to be permitted
+ by applicable law, copy, disassemble, reverse engineer, or decompile an Offering, or access an Offering to build a competitive  service
+by copying or using similar ideas, features, functions or graphics of the Offering. You may not use any "deep-link", "page-scrape", "robo
+t", "spider" or other automatic device, program, algorithm or methodology, or any similar or equivalent manual process, to access, acquir
+e, copy or monitor any portion of our Offerings or Content. Anaconda reserves the right to end any such activity. If You would like to re
+distribute or embed any Offering in any product You are developing, please contact the Anaconda team for a third party redistribution com
+mercial license.
+
+
+2. USERS & LICENSING.
+   1. Organizational Use.  Your registration, download, use, installation, access, or enjoyment of all Anaconda Offerings on behalf of an
+ organization that has two hundred (200) or more employees or contractors ("Organizational Use") requires a paid license. For sake of cla
+rity, use by government entities and nonprofit entities with over 200 employees or contractors is considered Organizational Use.  Educati
+onal Entities will be exempt from the paid license requirement, provided that the use of the Anaconda Offering(s) is solely limited to be
+ing used for a curriculum-based course. Anaconda reserves the right to monitor the registration, download, use, installation, access, or
+enjoyment of the Anaconda Offerings to ensure it is part of a curriculum.
+   2. Use by Authorized Users. Your "Authorized Users" are your employees, agents, and independent contractors (including outsourcing ser
+vice providers) who you authorize to use the Anaconda Offering(s) on Your behalf for Your Internal Use, provided that You are responsible
+ for: (a) ensuring that such Authorized Users comply with these TOS or an applicable Custom Agreement; and  (b) any breach of these TOS b
+y such Authorized Users.
+   3. Use by Your Affiliates. Your Affiliates may use the Anaconda Offering(s) on Your behalf for Your Internal Use only with prior writt
+en approval from Anaconda.
+   4. Licenses for Systems. For each End User Computing Device ("EUCD") (i.e. laptops, desktop devices) one license covers one installati
+on and a reasonable number of virtual installations on the EUCD (e.g. Docker, VirtualBox, Parallels, etc.). Any other installations, usag
+e, deployments, or access must have an individual license per each additional usage.
+   5. Mirroring. You may only Mirror the Anaconda Offerings with the purchase of a Site License unless explicitly included in an Order Fo
+rm or Custom Agreement.
+   6. Beta Offerings. Anaconda provides Beta Offerings "AS-IS" without support or any express or implied warranty or indemnity for any pr
+oblems or issue s, and Anaconda has no liability relating to Your use of the Beta Offerings. Unless agreed in writing by Anaconda, You wi
+ll not put Beta Offerings into production use. You may only use the Beta Offerings for the period specified by Anaconda in writing; (b) A
+naconda, in its discretion, may stop providing the Beta Offerings at any time, at which point You must immediately cease using the Beta O
+ffering(s); and (c) Beta Offerings may contain bugs, errors, or other issues..
+   7. Content. In consideration of Your payment of Subscription Fees, Anaconda hereby grants to You and Your Users a personal, non-exclus
+ive, non-transferable, non-sublicensable, revocable, limited right and license during the Usage Term to access, input, use, transmit, cop
+y, process, and measure the Content solely (1) within the Offerings and to the extent required to enable the ordinary and unmodified func
+tionality of the Offerings as described in the Offering descriptions, and (2) for your Internal Use. Customer hereby acknowledge that the
+ grant hereunder is solely being provided for your Internal Use and not to modify or to create any derivatives based on the Content.
+
+
+3. ANACONDA OFFERINGS.
+   1. Upgrades or Additional Copies of Offerings. You may only use additional copies of the Offerings beyond Your Order if You have acqui
+red such rights under an agreement with Anaconda and you may only use Upgrades under Your Order to the extent you have discontinued use o
+f prior versions of the Offerings.
+   2. Changes to Offerings; Maintenance. Anaconda may: (a) enhance or refine an Offering, although in doing so, Anaconda will not materia
+lly reduce the core functionality of that Offering, except as contemplated in Section 3.4 (End of Life); and (b) perform scheduled mainte
+nance of the infrastructure and software used to provide an Offering, during which You may experience some disruption to that Offering.
+Whenever reasonably practicable, Anaconda will provide You with advance notice of such maintenance. You acknowledge that occasionally, An
+aconda may need to perform emergency maintenance without providing You advance notice, during which Anaconda may temporarily suspend Your
+ access to, and use of, the Offering.
+   3. Use with Third Party Products. If You use the Anaconda Offering(s) with third party products, such use is at Your risk. Anaconda do
+es not provide support or guarantee ongoing integration support for products that are not a native part of the Anaconda Offering(s).
+   4. End of Life. Anaconda reserves the right to discontinue the availability of an Anaconda Offering, including its component functiona
+lity, hereinafter referred to as "End of Life" or "EOL", by providing written notice through its official website, accessible at www.anac
+onda.com at least sixty (60) days prior to the EOL. In such instances, Anaconda is under no obligation to provide support in the transiti
+on away from the EOL Offering or feature, You shall transition to the latest version of the Anaconda Offering, as soon as the newest Vers
+ion is released in order to maintain uninterrupted service. In the event that You or Your designated Anaconda Partner have previously rem
+itted a prepaid fee for the utilization of Anaconda Offering, and if the said Offering becomes subject to End of Life (EOL) before the en
+d of an existing Usage Term, Anaconda shall undertake commercially reasonable efforts to provide the necessary information to facilitate
+a smooth transition to an alternative Anaconda Offering that bears substantial similarity in terms of functionality and capabilities. Ana
+conda will not be held liable for any direct or indirect consequences arising from the EOL of an Offering or feature, including but not l
+imited to data loss, service interruption, or any impact on business operations.
+
+
+4. OPEN SOURCE, CONTENT & APPLICATIONS
+   1. Open-Source Software & Packages. Our Offerings include open-source libraries, components, utilities, and third-party software that
+is distributed or otherwise made available as "free software," "open-source software," or under a similar licensing or distribution model
+ ("Open-Source Software"), which may be subject to third party open-source license terms (the "Open-Source Terms"). Certain Offerings are
+ intended for use with open-source Python and R software packages and tools for statistical computing and graphical analysis ("Packages")
+, which are made available in source code form by third parties and Community Users. As such, certain Offerings interoperate with certain
+ Open-Source Software components, including without limitation Open Source Packages, as part of its basic functionality; and to use certa
+in Offerings, You will need to separately license Open-Source Software and Packages from the licensor. Anaconda is not responsible for Op
+en-Source Software or Packages and does not assume any obligations or liability with respect to You or Your Users' use of Open-Source Sof
+tware or Packages. Notwithstanding anything to the contrary, Anaconda makes no warranty or indemnity hereunder with respect to any Open-S
+ource Software or Packages. Some of such Open-Source Terms or other license agreements applicable to Packages determine that to the exten
+t applicable to the respective Open-Source Software or Packages licensed thereunder.  Any such terms prevail over any conflicting license
+ terms, including these TOS. Anaconda will use best efforts to use only Open-Source Software and Packages that do not impose any obligati
+on or affect the Customer Data (as defined hereinafter) or Intellectual Property Rights of Customer (beyond what is stated in the Open-So
+urce Terms and herein), on an ordinary use of our Offerings that do not involve any modification, distribution, or independent use of suc
+h Open-Source Software.
+   2. Open Source Project Affiliation. Anaconda's software packages are not affiliated with upstream open source projects. While Anaconda
+ may distribute and adapt open source software packages for user convenience, such distribution does not imply any endorsement, approval,
+ or validation of the original software's quality, security, or suitability for specific purposes.
+   3. Third-Party Services and Content. You may access or use, at Your sole discretion, certain third-party products, services, and Conte
+nt that interoperate with the Offerings including, but not limited to: (a) third party Packages, components, applications, services, data
+, content, or resources found in the Offerings, and (b) third-party service integrations made available through the Offerings or APIs (co
+llectively, "Third-Party Services"). Each Third-Party Service is governed by the applicable terms and policies of the third-party provide
+r. The terms under which You access, use, or download Third-Party Services are solely between You and the applicable Third-Party Service
+provider. Anaconda does not make any representations, warranties, or guarantees regarding the Third-Party Services or the providers there
+of, including, but not limited to, the Third-Party Services' continued availability, security, and integrity. Third-Party Services are ma
+de available by Anaconda on an "AS IS" and "AS AVAILABLE" basis, and Anaconda may cease providing them in the Offerings at any time in it
+s sole discretion and You shall not be entitled to any refund, credit, or other compensation.
+
+
+5. CUSTOMER CONTENT, APPLICATIONS, & RESPONSIBILITIES
+   1. Customer Content and Applications. Your content remains your own. We assume no liability for the content you publish through our se
+rvices. However, you must adhere to our Acceptable Use Policy while utilizing our platform. You can share your submitted Customer Content
+ or Customer Applications with others using our Offerings. By sharing Your Content, you grant legal rights to those You give access to. A
+naconda has no responsibility to enforce, police, or otherwise aid You in enforcing or policing the terms of the license(s) or permission
+(s) You have chosen to offer. Anaconda is not liable for third-party misuse of your submitted Customer Content or Customer Applications o
+n our Offerings. Customer Applications does not include any derivative works that might be created out of open source where the license p
+rohibits derivative works.
+   2. Removal of Customer Content and Applications. If You received a removal notification regarding any Customer Content or a Customer A
+pplication due to legal reasons or policy violations, you promptly must do so. If You don't comply or the violation persists, Anaconda ma
+y disable the Content or your access to the Content. If required, You must confirm in writing that you've deleted or stopped using the Cu
+stomer Content or Customer Applications. Anaconda might also remove Customer Content or Customer Applications if requested by a Third-par
+ty rights holder whose rights have been violated. Anaconda isn't obliged to store or provide copies of Customer Content or Customer Appli
+cations that have been removed, is Your responsibility to maintain a back-up of Your Content.
+   3. Protecting Account Access. You will keep all account information up to date, use reasonable means to protect Your account informati
+on, passwords, and other login credentials, and promptly notify Anaconda of any known or suspected unauthorized use of or access to Your
+account.
+
+
+6. YOUR DATA, PRIVACY & SECURITY
+   1. Your Data. Your Data, hereinafter "Customer Data", is any data, files, attachments, text, images, reports, personal information, or
+ any other data that is, uploaded or submitted, transmitted, or otherwise made available, to or through the Offerings, by You or any of y
+our Authorized Users and is processed by Anaconda on your behalf. For the avoidance of doubt, Anonymized Data is not regarded as Customer
+ Data. You retain all right, title, interest, and control, in and to the Customer Data, in the form submitted to the Offerings. Subject t
+o these TOS, You grant Anaconda a worldwide, royalty-free, non-exclusive license to store, access, use, process, copy, transmit, distribu
+te, perform, export, and display the Customer Data, and solely to the extent that reformatting Customer Data for display in the Offerings
+ constitutes a modification or derivative work, the foregoing license also includes the right to make modifications and derivative works.
+ The aforementioned license is hereby granted solely: (i) to maintain, improve and provide You the Offerings; (ii) to prevent or address
+technical or security issues and resolve support requests; (iii) to investigate when we have a good faith belief, or have received a comp
+laint alleging, that such Customer Data is in violation of these TOS; (iv) to comply with a valid legal subpoena, request, or other lawfu
+l process; (v) detect and avoid overage of use of our Offering and confirm compliance by Customer with these TOS and other applicable agr
+eements and policies;  (vi) to create Anonymized Data whether directly or through telemetry, and (vi) as expressly permitted in writing b
+y You. Anaconda may use and retain your Account Information for business purposes related to these TOS and to the extent necessary to mee
+t Anaconda's legal compliance obligations (including, for audit and anti-fraud purposes). We reserve the right to utilize aggregated data
+ to enhance our Offerings functionality, ensure  compliance, avoid Offering overuse, and derive insights from customer behavior, in stric
+t adherence to our Privacy Policy.
+   2. Processing Customer Data. The ordinary operation of certain Offerings requires Customer Data to pass through Anaconda's network. To
+ the extent that Anaconda processes Customer Data on your behalf that includes Personal Data, Anaconda will handle such Personal Data in
+compliance with our Data Processing Addendum
+   3. Privacy Policy.  If You obtained the Offering under these TOS, the conditions pertaining to the handling of your Personal Data, as
+described in our Privacy Policy, shall govern. However, in instances where your offering acquisition is executed through a Custom Agreeme
+nt, the terms articulated within our Data Processing Agreement ("DPA") shall take precedence over our Privacy Policy concerning data proc
+essing matters.
+   4. Aggregated  Data. Anaconda retains all right, title, and interest in the models, observations, reports, analyses, statistics, datab
+ases, and other information created, compiled, analyzed, generated or derived by Anaconda from platform, network, or traffic data in the
+course of providing the Offerings ("Aggregated Data"). To the extent the Aggregated Data includes any Personal Data, Anaconda will handle
+ such Personal Data in compliance with applicable data protection laws and the Privacy Policy or DPA, as applicable.
+   5. Offering Security. Anaconda will implement industry standard security safeguards for the protection of Customer Confidential Inform
+ation, including any Customer Content originating or transmitted from or processed by the Offerings and/or cached on or within Anaconda's
+ network and stored within the Offerings in accordance with its policies and procedures. These safeguards include commercially reasonable
+ administrative, technical, and organizational measures to protect Customer Content against destruction, loss, alteration, unauthorized d
+isclosure, or unauthorized access, including such things as information security policies and procedures, security awareness training, th
+reat and vulnerability management, incident response and breach notification, and vendor risk management procedures.
+
+
+7. SUPPORT
+   1. Support Services. Anaconda offers Support Services that may be included with an Offering. Anaconda will provide the purchased level
+ of Support Services in accordance with the terms of the Support Policy as detailed in the applicable Order. Unless ordered, Anaconda sha
+ll have no responsibility to deliver Support Services to You. The Support Service Levels and Tiers are described in the relevant Support
+Policy, found here.
+   2. Information Backups. You are aware of the risk that Your Content may be lost or irreparably damaged due to faults, suspension, or t
+ermination. While we might back up data, we cannot guarantee these backups will occur to meet your frequency needs or ensure successful r
+ecovery of Your Content. It is your obligation to back up any Content you wish to preserve. We bear no legal liability for the loss or da
+mage of Your Content.
+
+
+8. OWNERSHIP & INTELLECTUAL PROPERTY
+   1. General. Unless agreed in writing, nothing in these TOS transfers ownership in, or grants any license to, any Intellectual Property
+ Rights.
+   2. Feedback. Anaconda may use any feedback You provide in connection with Your use of the Anaconda Offering(s) as part of its business
+ operations. You hereby agree that any feedback provided to Anaconda will be the intellectual property of Anaconda without compensation t
+o the provider, author, creator, or inventor of providing the feedback.
+   3. DMCA Compliance. You agree to adhere to our Digital Millennium Copyright Act (DMCA) policies established in our Acceptable Use Poli
+cy.
+
+
+9. CONFIDENTIAL INFORMATION.
+   1. Confidential Information. In connection with these TOS and the Offerings (including the evaluation thereof), each Party ("Discloser
+") may disclose to the other Party ("Recipient"), non-public business, product, technology and marketing information, including without l
+imitation, customers lists and information, know-how, software and any other non-public information that is either identified as such or
+should reasonably be understood to be confidential given the nature of the information and the circumstances of disclosure, whether discl
+osed prior or after the Effective Date ("Confidential Information"). For the avoidance of doubt, (i) Customer Data is regarded as your Co
+nfidential Information, and (ii) our Offerings, including Beta Offerings, and inclusive of their underlying technology, and their respect
+ive performance information, as well as any data, reports, and materials we provided to You in connection with your evaluation or use of
+the Offerings, are regarded as our Confidential Information. Confidential Information does not include information that (a) is or becomes
+ generally available to the public without breach of any obligation owed to the Discloser; (b) was known to the Recipient prior to its di
+sclosure by the Discloser without breach of any obligation owed to the Discloser; (c) is received from a third party without breach of an
+y obligation owed to the Discloser; or (d) was independently developed by the Recipient without any use or reference to the Confidential
+Information.
+   2. Confidentiality Obligations. The Recipient will (i) take at least reasonable measures to prevent the unauthorized disclosure or use
+ of Confidential Information, and limit access to those employees, affiliates, service providers and agents, on a need to know basis and
+who are bound by confidentiality obligations at least as restrictive as those contained herein; and (ii) not use or disclose any Confiden
+tial Information to any third party, except as part of its performance under these TOS and to consultants and advisors to such party, pro
+vided that any such disclosure shall be governed by confidentiality obligations at least as restrictive as those contained herein.
+   3. Compelled Disclosure. Notwithstanding the above, Confidential Information may be disclosed pursuant to the order or requirement of
+a court, administrative agency, or other governmental body; provided, however, that to the extent legally permissible, the Recipient shal
+l make best efforts to provide prompt written notice of such court order or requirement to the Discloser to enable the Discloser to seek
+a protective order or otherwise prevent or restrict such disclosure.
+
+
+10. INDEMNIFICATION
+   1. By Customer. Customer hereby agree to indemnify, defend and hold harmless Anaconda and our Affiliates and their respective officers
+, directors, employees and agents from and against any and all claims, damages, obligations, liabilities, losses, reasonable expenses or
+costs incurred as a result of any third party claim arising from (i) You and/or any of your Authorized Users', violation of these TOS or
+applicable law; and/or (ii) Customer Data and/or Customer Content, including the use of Customer Data and/or Customer Content by Anaconda
+ and/or any of our subcontractors, which infringes or violates, any third party's rights, including, without limitation, Intellectual Pro
+perty Rights.
+   2. By Anaconda. Anaconda will defend any third party claim against You that Your valid use of Anaconda Offering(s) under Your Order in
+fringes a third party's U.S. patent, copyright or U.S. registered trademark (the "IP Claim"). Anaconda will indemnify You against the fin
+al judgment entered by a court of competent jurisdiction or any settlements arising out of an IP Claim, provided that You:  (a) promptly
+notify Anaconda in writing of the IP Claim;  (b) fully cooperate with Anaconda in the defense of the IP Claim; and (c) grant Anaconda the
+ right to exclusively control the defense and settlement of the IP Claim, and any subsequent appeal. Anaconda will have no obligation to
+reimburse You for Your attorney fees and costs in connection with any IP Claim for which Anaconda is providing defense and indemnificatio
+n hereunder. You, at Your own expense, may retain Your own legal representation.
+   3. Additional Remedies. If an IP Claim is made and prevents Your exercise of the Usage Rights, Anaconda will either procure for You th
+e right to continue using the Anaconda Offering(s), or replace or modify the Anaconda Offering(s) with functionality that is non-infringi
+ng. Only if Anaconda determines that these alternatives are not reasonably available, Anaconda may terminate Your Usage Rights granted un
+der these TOS upon written notice to You and will refund You a prorated portion of the fee You paid for the Anaconda Offering(s) for the
+remainder of the unexpired Usage Term.
+   4. Exclusions.  Anaconda has no obligation regarding any IP Claim based on: (a) compliance with any designs, specifications, or requir
+ements You provide or a third party provides; (b) Your modification of any Anaconda Offering(s) or modification by a third party; (c) the
+ amount or duration of use made of the Anaconda Offering(s), revenue You earned, or services You offered; (d) combination, operation, or
+use of the Anaconda Offering(s) with non-Anaconda products, software or business processes; (e) Your failure to modify or replace the Ana
+conda Offering(s) as required by Anaconda; or (f) any Anaconda Offering(s) provided on a no charge, beta or evaluation basis; or (g) your
+ use of the Open Source Software and/or Third Party Services made available to You within the Anaconda Offerings.
+   5. Exclusive Remedy. This Section 11 (Indemnification) states Anaconda's entire obligation and Your exclusive remedy regarding any IP
+Claim against You.
+
+
+11. LIMITATION OF LIABILITY
+   1. Limitation of Liability. Neither Party will be liable for indirect, incidental, exemplary, punitive, special or consequential damag
+es; loss or corruption of data or interruption or loss of business; or loss of revenues, profits, goodwill or anticipated sales or saving
+s except as a result of violation of Anaconda's Intellectual Property Rights. Except as a result of violation of Anaconda's Intellectual
+Property Rights, the maximum aggregate liability of each party under these TOS is limited to: (a) for claims solely arising from software
+ licensed on a perpetual basis, the fees received by Anaconda for that Offering; or (b) for all other claims, the fees received by Anacon
+da for the applicable Anaconda Offering and attributable to the 12 month period immediately preceding the first claim giving rise to such
+ liability; provided if no fees have been received by Anaconda, the maximum aggregate liability shall be one hundred US dollars ($100). T
+his limitation of liability applies whether the claims are in warranty, contract, tort (including negligence), infringement, or otherwise
+, even if either party has been advised of the possibility of such damages. Nothing in these TOS limits or excludes any liability that ca
+nnot be limited or excluded under applicable law. This limitation of liability is cumulative and not per incident.
+   2. Exclusions. Section 10 does not apply to liability arising from:  (a) Your failure to pay all amounts due; or (b) Your breach of Se
+ction 1 (Access & Use), Section 4 (Open Source, Content & Applications), Section 5 (Customer Content, Applications & Responsibilities), S
+ection 8 (Ownership & Intellectual Property) or Section 16.10 (Export).
+
+
+12. FEES & PAYMENT
+   1. Fees. Orders for the Anaconda Offering(s) are non-cancellable. Fees for Your use of an Anaconda Offering are set out in Your Order
+or similar purchase terms with Your Approved Source.
+   2. Billing. You agree to provide us with updated, accurate, and complete billing information, and You hereby authorize Anaconda, eithe
+r directly or through our payment processing service or our Affiliates, to charge the applicable Fees set forth in Your Order via your se
+lected payment method, upon the due date. Unless expressly set forth herein, the Fees are non-cancelable and non-refundable. We reserve t
+he right to change the Fees at any time, upon notice to You if such change may affect your existing Subscriptions or other renewable serv
+ices upon renewal. In the event of failure to collect the Fees You owe, we may, at our sole discretion (but shall not be obligated to), r
+etry to collect at a later time, and/or suspend or cancel the Account, without notice. If You pay fees by credit card, Anaconda will char
+ge the credit card in accordance with Your Subscription plan. You remain liable for any fees which are rejected by the card issuer or cha
+rged back to Anaconda. You agree to pay a late charge of one percent (1%) per month (or part of a month), or the maximum lawful rate perm
+itted by applicable law, whichever is less, for all amounts not paid when due.
+   3. Taxes. The Fees are exclusive of any and all taxes (including without limitation, value added tax, sales tax, use tax, excise, good
+s and services tax, etc.), levies, or duties, which may be imposed in respect of these TOS and the purchase or sale, of the Offerings or
+other services set forth in the Order (the "Taxes"), except for Taxes imposed on our income.
+   4. Payment Through Anaconda Partner. If You purchased an Offering from an Anaconda Partner or other Approved Source, then to the exten
+t there is any conflict between these TOS and any terms of service entered between You and the respective Partner, including any purchase
+ order, then, as between You and Anaconda, these TOS shall prevail. Any rights granted to You and/or any of the other Users in a separate
+ agreement with a Partner which are not contained in these TOS, apply only in connection vis a vis the Partner.
+
+
+13. TERM, TERMINATION & SUSPENSION
+   1. Subscription Term. The Offerings are provided on a subscription basis for the term specified in your Order (the "Subscription Term"
+). The termination or suspension of an individual Order will not terminate or suspend any other Order. If these TOS are terminated in who
+le, all outstanding Order(s) will terminate.
+   2. Subscription Auto-Renewal. To prevent interruption or loss of service when using the Offerings or any Subscription and Support Serv
+ices will renew automatically, unless You cancel your license to the Offering, Subscription or Support Services agreement prior to their
+expiration.
+   3. Termination. If a party materially breaches these TOS and does not cure that breach within 30 days after receipt of written notice
+of the breach, the non-breaching party may terminate these TOS for cause.  Anaconda may immediately terminate your Usage Rights if You br
+each Section 1 (Access & Use), Section 4 (Open Source, Content & Applications), Section 8 (Ownership & Intellectual Property) or Section
+16.10 (Export) or any of the Offering Descriptions.
+   4. Survival. Section 8 (Ownership & Intellectual Property), Section 6.4 (Aggregated Data), Section 9 (Confidential Information), Secti
+on 9.3 (Warranty Disclaimer), Section 12 (Limitation of Liability), Section 14 (Term, Termination & Suspension),  obligations to make pay
+ment under Section 13 which accrued prior to termination (Fees & Payment), Section 14.4 (Survival), Section 14.5 (Effect of Termination),
+ Section 15 (Records, User Count) and Section 16 (General Provisions) survive termination or expiration of these TOS.
+   5. Effect of Termination. Upon termination of the TOS, You must stop using the Anaconda Offering(s) and destroy any copies of Anaconda
+ Proprietary Technology and Confidential Information within Your control. Upon Anaconda's termination of these TOS for Your material brea
+ch, You will pay Anaconda or the Approved Source any unpaid fees through to the end of the then-current Usage Term. If You continue to us
+e or access any Anaconda Offering(s) after termination, Anaconda or the Approved Source may invoice You, and You agree to pay, for such c
+ontinued use.
+   6. Excessive Usage. We shall have the right to throttle or restrict Your access to the Offerings where we, at our sole discretion, bel
+ieve that You and/or any of your Authorized Users, have misused the Offerings or otherwise use the Offerings in an excessive manner compa
+red to the anticipated standard use (at our sole discretion) of the Offerings, including, without limitation, excessive network traffic a
+nd bandwidth, size and/or length of Content, quality and/or format of Content, sources of Content, volume of download time, etc.
+
+
+14. RECORDS, USER COUNT
+   1. Verification Records. During the Usage Term and for a period of thirty six (36) months after its expiry or termination, You will ta
+ke reasonable steps to maintain complete and accurate records of Your use of the Anaconda Offering(s) sufficient to verify compliance wit
+h these TOS ("Verification Records"). Upon reasonable advance notice, and no more than once per 12 month period unless the prior review s
+howed a breach by You, You will, within thirty (30) days from Anaconda's notice, allow Anaconda and/or its auditors access to the Verific
+ation Records and any applicable books, systems (including Anaconda product(s) or other equipment), and accounts during Your normal busin
+ess hours.
+   2. Quarterly User Count. In accordance with the pricing structure stipulated within the relevant Order Form and this Agreement, in ins
+tances where the pricing assessment is contingent upon the number of users, Anaconda will conduct a periodic true-up on  a quarterly basi
+s to ascertain the alignment between the actual number of users utilizing the services and the initially reported user count, and to asse
+ss for any unauthorized or noncompliant usage.
+   3. Penalties for Overage or Noncompliant Use.  Should the actual user count exceed the figure initially provided, or unauthorized usag
+e is uncovered, the contracting party shall remunerate the difference to Anaconda, encompassing the additional users or noncompliant use
+in compliance with Anaconda's then-current pricing terms. The payment for such difference shall be due in accordance with the invoicing a
+nd payment provisions specified in these TOS and/or within the relevant Order and the Agreement. In the event there is no custom commerci
+al agreement beyond these TOS between You and Anaconda at the time of a true-up pursuant to Section 13.2, and said true-up uncovers unaut
+horized or noncompliant usage, You will remunerate Anaconda via a back bill for any fees owed as a result of all unauthorized usage after
+ April of 2020.  Fees may be waived by Anaconda at its discretion.
+
+
+15. GENERAL PROVISIONS
+   1. Order of Precedence. If there is any conflict between these TOS and any Offering Description expressly referenced in these TOS, the
+ order of precedence is: (a) such Offering Description;  (b) these TOS (excluding the Offering Description and any Anaconda policies); th
+en (c) any applicable Anaconda policy expressly referenced in these TOS and any agreement expressly incorporated by reference.  If there
+is a Custom Agreement, the Custom Agreement shall control over these TOS.
+   2. Entire Agreement. These TOS are the complete agreement between the parties regarding the subject matter of these TOS and supersedes
+ all prior or contemporaneous communications, understandings or agreements (whether written or oral) unless a Custom Agreement has been e
+xecuted where, in such case, the Custom Agreement shall continue in full force and effect and shall control.
+   3. Modifications to the TOS. Anaconda may change these TOS or any of its components by updating these TOS on www.anaconda.com. Changes
+ to the TOS apply to any Orders acquired or renewed after the date of modification.
+   4. Third Party Beneficiaries. These TOS do not grant any right or cause of action to any third party.
+   5. Assignment. Anaconda may assign this Agreement to (a) an Affiliate; or (b) a successor or acquirer pursuant to a merger or sale of
+all or substantially all of such party's assets at any time and without written notice. Subject to the foregoing, this Agreement will be
+binding upon and will inure to the benefit of Anaconda and their respective successors and permitted assigns.
+   6. US Government End Users. The Offerings and Documentation are deemed to be "commercial computer software" and "commercial computer s
+oftware documentation" pursuant to FAR 12.212 and DFARS 227.7202. All US Government end users acquire the Offering(s) and Documentation w
+ith only those rights set forth in these TOS. Any provisions that are inconsistent with federal procurement regulations are not enforceab
+le against the US Government. In no event shall source code be provided or considered to be a deliverable or a software deliverable under
+ these TOS.
+   7. Anaconda Partner Transactions. If You purchase access to an Anaconda Offering from an Anaconda Partner, the terms of these TOS appl
+y to Your use of that Anaconda Offering and prevail over any inconsistent provisions in Your agreement with the Anaconda Partner.
+   8. Children and Minors. If You are under 18 years old, then by entering into these TOS You explicitly stipulate that (i) You have lega
+l capacity to consent to these TOS or Your parent or legal guardian has done so on Your behalf;  (ii) You understand the Anaconda Privacy
+ Policy; and (iii) You understand that certain underage users are strictly prohibited from using certain features and functionalities pro
+vided by the Anaconda Offering(s). You may not enter into these TOS if You are under 13 years old.
+   9. Compliance with Laws.  Each party will comply with all laws and regulations applicable to their respective obligations under these
+TOS.
+   10. Export. The Anaconda Offerings are subject to U.S. and local export control and sanctions laws. You acknowledge and agree to the a
+pplicability of and Your compliance with those laws, and You will not receive, use, transfer, export or re-export any Anaconda Offerings
+in a way that would cause Anaconda to violate those laws. You also agree to obtain any required licenses or authorizations.  Without limi
+ting the foregoing, You may not acquire Offerings if: (1) you are in, under the control of, or a national or resident of Cuba, Iran, Nort
+h Korea, Sudan or Syria or if you are on the U.S. Treasury Department's Specially Designated Nationals List or the U.S. Commerce Departme
+nt's Denied Persons List, Unverified List or Entity List or (2) you intend to supply the acquired goods, services or software to Cuba, Ir
+an, North Korea, Sudan or Syria (or a national or resident of one of these countries) or to a person on the Specially Designated National
+s List, Denied Persons List, Unverified List or Entity List.
+   11. Governing Law and Venue. THESE TOS, AND ANY DISPUTES ARISING FROM THEM, WILL BE GOVERNED EXCLUSIVELY BY THE GOVERNING LAW OF DELAW
+ARE AND WITHOUT REGARD TO CONFLICTS OF LAWS RULES OR THE UNITED NATIONS CONVENTION ON THE INTERNATIONAL SALE OF GOODS. EACH PARTY CONSENT
+S AND SUBMITS TO THE EXCLUSIVE JURISDICTION OF COURTS LOCATED WITHIN THE STATE OF DELAWARE.  EACH PARTY DOES HEREBY WAIVE HIS/HER/ITS RIG
+HT TO A TRIAL BY JURY, TO PARTICIPATE AS THE MEMBER OF A CLASS IN ANY PURPORTED CLASS ACTION OR OTHER PROCEEDING OR TO NAME UNNAMED MEMBE
+RS IN ANY PURPORTED CLASS ACTION OR OTHER PROCEEDINGS. You acknowledge that any violation of the requirements under Section 4 (Ownership
+& Intellectual Property) or Section 7 (Confidential Information) may cause irreparable damage to Anaconda and that Anaconda will be entit
+led to seek injunctive and other equitable or legal relief to prevent or compensate for such unauthorized use.
+   12. California Residents. If you are a California resident, in accordance with Cal. Civ. Code subsection 1789.3, you may report compla
+ints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting
+ them in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by telephone at (800) 952-5210.
+   13. Notices. Any notice delivered by Anaconda to You under these TOS will be delivered via email, regular mail or postings on www.anac
+onda.com. Notices to Anaconda should be sent to Anaconda, Inc., Attn: Legal at 1108 Lavaca Street, Suite 110-645 Austin, TX 78701 and leg
+al@anaconda.com.
+   14. Publicity. Anaconda reserves the right to reference You as a customer and display your logo and name on our website and other prom
+otional materials for marketing purposes. Any display of your logo and name shall be in compliance with Your branding guidelines, if prov
+ided  by notice pursuant to Section 14.12 by You. Except as provided in this Section 14.13 or by separate mutual written agreement, neith
+er party will use the logo, name or trademarks of the other party or refer to the other party in any form of publicity or press release w
+ithout such party's prior written approval.
+   15. Force Majeure. Except for payment obligations, neither party will be responsible for failure to perform its obligations due to an
+event or circumstances beyond its reasonable control.
+   16. No Waiver; Severability. Failure by either party to enforce any right under these TOS will not waive that right. If any portion of
+ these TOS are not enforceable, it will not affect any other terms.
+   17. Electronic Signatures.  IF YOUR ACCEPTANCE OF THESE TERMS FURTHER EVIDENCED BY YOUR AFFIRMATIVE ASSENT TO THE SAME (E.G., BY A "CH
+ECK THE BOX" ACKNOWLEDGMENT PROCEDURE), THEN THAT AFFIRMATIVE ASSENT IS THE EQUIVALENT OF YOUR ELECTRONIC SIGNATURE TO THESE TERMS.  HOWE
+VER, FOR THE AVOIDANCE OF DOUBT, YOUR ELECTRONIC SIGNATURE IS NOT REQUIRED TO EVIDENCE OR FACILITATE YOUR ACCEPTANCE AND AGREEMENT TO THE
+SE TERMS, AS YOU AGREE THAT THE CONDUCT DESCRIBED IN THESE TOS AS RELATING TO YOUR ACCEPTANCE AND AGREEMENT TO THESE TERMS ALONE SUFFICES
+.
+
+
+16. DEFINITIONS.
+"Affiliate" means any corporation or legal entity that directly or indirectly controls, or is controlled by, or is under common control w
+ith the relevant party, where "control" means to: (a) own more than 50% of the relevant party; or (b) be able to direct the affairs of th
+e relevant party through any lawful means (e.g., a contract that allows control).
+"Anaconda" "we" "our" or "us" means Anaconda, Inc. or its applicable Affiliate(s).
+"Anaconda Content" means any:  Anaconda Content includes geographic and domain information, rules, signatures, threat intelligence and da
+ta feeds and Anaconda's compilation of suspicious URLs.
+"Anaconda Partner" or "Partner" means an Anaconda authorized reseller, distributor or systems integrator authorized by Anaconda to sell A
+naconda Offerings.
+"Anaconda Offering" or "Offering" means the Anaconda Services, Anaconda software, Documentation, software development kits ("SDKs"), appl
+ication programming interfaces ("APIs"), and any other items or services provided by Anaconda any Upgrades thereto under the terms of the
+se TOS, the relevant Offering Descriptions, as identified in the relevant Order, and/or any updates thereto.
+"Anaconda Proprietary Technology" means any software, code, tools, libraries, scripts, APIs, SDKs, templates, algorithms, data science re
+cipes (including any source code for data science recipes and any modifications to such source code), data science workflows, user interf
+aces, links, proprietary methods and systems, know-how, trade secrets, techniques, designs, inventions, and other tangible or intangible
+technical material, information and works of authorship underlying or otherwise used to make available the Anaconda Offerings including,
+without limitation, all Intellectual Property Rights therein and thereto.
+"Anaconda Service" means Support Services and any other consultation or professional services provided by or on behalf of Anaconda under
+the terms of the Agreement, as identified in the applicable Order and/or SOW.
+"Approved Source" means Anaconda or an Anaconda Partner.
+"Anonymized Data" means any Personal Data (including Customer Personal Data) and data regarding usage trends and behavior with respect to
+ Offerings, that has been anonymized such that the Data Subject to whom it relates cannot be identified, directly or indirectly, by Anaco
+nda or any other party reasonably likely to receive or access that anonymized Personal Data or usage trends and behavior.
+"Authorized Users" means Your Users, Your Affiliates who have been identified to Anaconda and approved, Your third-party service provider
+s, and each of their respective Users who are permitted to access and use the Anaconda Offering(s) on Your behalf as part of Your Order.
+"Beta Offerings"
+"Content" means Packages, components, applications, services, data, content, or resources, which are available for download access or use
+ through the Offerings, and owned by third-party providers, defined herein as Third Party Content, or Anaconda, defined herein as Anacond
+a Content.
+"Documentation" means the technical specifications and usage materials officially published by Anaconda specifying the functionalities an
+d capabilities of the applicable Anaconda Offerings.
+"Educational Entities" means educational organizations, classroom learning environments, or academic instructional organizations.
+"Fees" mean the costs and fees for the Anaconda Offerings(s) set forth within the Order and/or SOW, or any fees due immediately when purc
+hasing via the web-portal.
+"Government Entities" means any body, board, department, commission, court, tribunal, authority, agency or other instrumentality of any s
+uch government or otherwise exercising any executive, legislative, judicial, administrative or regulatory functions of any Federal, State
+, or local government (including multijurisdictional agencies, instrumentalities, and entities of such government)
+"Internal Use" means Customer's use of an Offering for Customer's own internal operations, to perform Python/R data science and machine l
+earning on a single platform from Customer's systems, networks, and devices. Such use does not include use on a service bureau basis or o
+therwise to provide services to, or process data for, any third party, or otherwise use to monitor or service the systems, networks, and
+devices of third parties.
+"Intellectual Property Rights" means any and all now known or hereafter existing worldwide: (a) rights associated with works of authorshi
+p, including copyrights, mask work rights, and moral rights; (b) trademark or service mark rights; (c) Confidential Information, includin
+g trade secret rights; (d) patents, patent rights, and industrial property rights; (e) layout design rights, design rights, and other pro
+prietary rights of every kind and nature other than trade dress, and similar rights; and (f) all registrations, applications, renewals, e
+xtensions, or reissues of the foregoing.
+"Malicious Code" means code designed or intended to disable or impede the normal operation of, or provide unauthorized access to, network
+s, systems, Software or Cloud Services other than as intended by the Anaconda Offerings (for example, as part of some of Anaconda's Secur
+ity Offering(s).
+"Mirror" or "Mirroring" means the unauthorized or authorized act of duplicating, copying, or replicating an Anaconda Offering,  (e.g. rep
+ository, including its contents, files, and data), from Anaconda's servers to another location. If Mirroring is not performed under a sit
+e license, or by written authorization by Anaconda, the Mirroring constitutes a violation of Anaconda's Terms of Service and licensing ag
+reements.
+"Offering Description"' means a legally structured and detailed description outlining the features, specifications, terms, and conditions
+ associated with a particular product, service, or offering made available to customers or users. The Offering Description serves as a le
+gally binding document that defines the scope of the offering, including pricing, licensing terms, usage restrictions, and any additional
+ terms and conditions.
+"Order" or "Order Form"  means a legally binding document, website page, or electronic mail that outlines the specific details of Your pu
+rchase of Anaconda Offerings or Anaconda Services, including but not limited to product specifications, pricing, quantities, and payment
+terms either issued by Anaconda or from an Approved Source.
+"Personal Data" Refers to information falling within the definition of 'personal data' and/or 'personal information' as outlined by Relev
+ant Data Protection Regulations, such as a personal identifier (e.g., name, last name, and email), financial information (e.g., bank acco
+unt numbers) and online identifiers (e.g., IP addresses, geolocation.
+"Relevant Data Protection Regulations" mean, as applicable, (a) Personal Information Protection and Electronic Documents Act (S.C. 2000,
+c. 5) along with any supplementary or replacement bills enacted into law by the Government of Canada (collectively "PIPEDA"); (b) the Gen
+eral Data Protection Regulation (Regulation (EU) 2016/679) and applicable laws by EU member states which either supplement or are necessa
+ry to implement the GDPR (collectively "GDPR"); (c) the California Consumer Privacy Act of 2018 (Cal. Civ. Code subsection 1798.198(a)),
+along with its various amendments (collectively "CCPA"); (d) the GDPR as applicable under section 3 of the European Union (Withdrawal) Ac
+t 2018 and as amended by the Data Protection, Privacy and Electronic Communications (Amendments etc.) (EU Exit) Regulations 2019 (as amen
+ded) (collectively "UK GDPR"); (e) the Swiss Federal Act on Data Protection  of June 19, 1992 and as it may be revised from time to time
+(the "FADP"); and (f) any other applicable law related to the protection of Personal Data.
+"Site License'' means a License that confers Customer the right to use Anaconda Offerings throughout an organization, encompassing author
+ized Users without requiring individual licensing arrangements. Site Licenses have limits based on company size as set forth in a relevan
+t Order, and does not cover future assignment of Users through mergers and acquisitions unless otherwise specified in writing by Anaconda
+.
+"Software" means the Anaconda Offerings, including Upgrades, firmware, and applicable Documentation.
+"Subscription" means the payment of recurring Ffees for accessing and using Anaconda's Software and/or an Anaconda Service over a specifi
+ed period. Your subscription grants you the right to utilize our products, receive updates, and access support, all in accordance with ou
+r terms and conditions for such Offering.
+"Subscription Fees" means the costs and Fees associated with a Subscription.
+"Support Services" means the support and maintenance services provided by Anaconda to You in accordance with the relevant support and mai
+ntenance policy ("Support Policy").
+"Third Party Services" means external products, applications, or services provided by entities other than Anaconda. These services may be
+ integrated with or used in conjunction with Anaconda's offerings but are not directly provided or controlled by Anaconda.
+"Upgrades" means all updates, upgrades, bug fixes, error corrections, enhancements and other modifications to the Software.
+"Usage Term" means the period commencing on the date of delivery and continuing until expiration or termination of the Order, during whic
+h period You have the right to use the applicable Anaconda Offering.
+"User"  means the individual, system (e.g. virtual machine, automated system, server-side container, etc.) or organization that (a) has v
+isited, downloaded or used the Offerings(s), (b) is using the Offering or any part of the Offerings(s), or (c) directs the use of the Off
+erings(s) in the performance of its functions.
+"Version" means the Offering configuration identified by a numeric representation, whether left or right of the decimal place.
+
+
+OFFERING DESCRIPTION: MINICONDA
+
+This Offering Description describes the Anaconda Premium Repository (hereinafter the "Premium Repository"). Your use of the Premium Repos
+itory is governed by this Offering Description, and the Anaconda Terms of Service (the "TOS", available at www.anaconda.com/legal), colle
+ctively the "Agreement" between you ("You") and Anaconda, Inc. ("We" or "Anaconda"). In the event of a conflict, the order of precedence
+is as follows: 1) this Offering Description; 2) if applicable, a Custom Agreement; and 3) the TOS if no Custom Agreement is in place. Cap
+italized terms used in this Offering Description and/or the Order not otherwise defined herein, including in Section 6 (Definitions), hav
+e the meaning given to them in the TOS or Custom Agreement, as applicable. Anaconda may, at any time, terminate this Agreement and the li
+cense granted hereunder if you fail to comply with any term of this Agreement. Anaconda reserves all rights not expressly granted to you
+in this Agreement.
+
+
+1. Miniconda. In order to access some features and functionalities of Business, You may need to first download and install Miniconda.
+2. Copyright Notice. Miniconda(R) (C) 2015-2024, Anaconda, Inc. All rights reserved under the 3-clause BSD License.
+3. License Grant. Subject to the terms of this Agreement, Anaconda hereby grants You a non-exclusive, non-transferable license to: (1) In
+stall and use Miniconda(R); (2) Modify and create derivative works of sample source code delivered in Miniconda(R) subject to the Anacond
+a Terms of Service (available at https://legal.anaconda.com/policies/en/?name=terms-of-service); and (3) Redistribute code files in sourc
+e (if provided to You by Anaconda as source) and binary forms, with or without modification subject to the requirements set forth below.
+4. Updates. Anaconda may, at its option, make available patches, workarounds or other updates to Miniconda(R). Unless the updates are pro
+vided with their separate governing terms, they are deemed part of Miniconda(R) licensed to You as provided in this Agreement.
+5. Support. This Agreement does not entitle You to any support for Miniconda(R).
+6. Redistribution. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the follo
+wing conditions are met: (1) Redistributions of source code must retain the above copyright notice, this list of conditions and the follo
+wing disclaimer; (2) Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials provided with the distribution.
+7. Intellectual Property Notice. You acknowledge that, as between You and Anaconda, Anaconda owns all right, title, and interest, includi
+ng all intellectual property rights, in and to Miniconda(R) and, with respect to third-party products distributed with or through Minicon
+da(R), the applicable third-party licensors own all right, title and interest, including all intellectual property rights, in and to such
+ products.
+
+
+Do you accept the license terms? [yes|no]
+>>> yes
+
+Miniconda3 will now be installed into this location:
+/Users/912032971/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/Users/912032971/miniconda3] >>>
+PREFIX=/Users/912032971/miniconda3
+Unpacking payload ...
+
+Installing base environment...
+
+
+Downloading and Extracting Packages:
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Executing transaction: done
+installation finished.
+Do you wish to update your shell profile to automatically initialize conda?
+This will activate conda on startup and change the command prompt when activated.
+If you'd prefer that conda's base environment not be activated on startup,
+   run the following command when conda is activated:
+
+conda config --set auto_activate_base false
+
+You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+[no] >>> yes
+no change     /Users/912032971/miniconda3/condabin/conda
+no change     /Users/912032971/miniconda3/bin/conda
+no change     /Users/912032971/miniconda3/bin/conda-env
+no change     /Users/912032971/miniconda3/bin/activate
+no change     /Users/912032971/miniconda3/bin/deactivate
+no change     /Users/912032971/miniconda3/etc/profile.d/conda.sh
+no change     /Users/912032971/miniconda3/etc/fish/conf.d/conda.fish
+no change     /Users/912032971/miniconda3/shell/condabin/Conda.psm1
+no change     /Users/912032971/miniconda3/shell/condabin/conda-hook.ps1
+no change     /Users/912032971/miniconda3/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /Users/912032971/miniconda3/etc/profile.d/conda.csh
+modified      /Users/912032971/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+Thank you for installing Miniconda3!
+[912032971@n1 ~]$ source
+-bash: source: filename argument required
+source: usage: source filename [arguments]
+[912032971@n1 ~]$ source $SHELL
+-bash: source: /bin/bash: cannot execute binary file
+[912032971@n1 ~]$ source .bashrc
+(base) [912032971@n1 ~]$ conda create -n retrievals python=3.7.2
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - python=3.7.2
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    certifi-2022.12.7          |   py37h06a4308_0         150 KB
+    libffi-3.2.1               |    hf484d3e_1007          48 KB
+    openssl-1.1.1w             |       h7f8727e_0         3.7 MB
+    pip-22.3.1                 |   py37h06a4308_0         2.7 MB
+    python-3.7.2               |       h0371630_0        31.9 MB
+    readline-7.0               |       h7b6447c_5         324 KB
+    setuptools-65.6.3          |   py37h06a4308_0         1.1 MB
+    sqlite-3.33.0              |       h62c20be_0         1.1 MB
+    wheel-0.38.4               |   py37h06a4308_0          63 KB
+    ------------------------------------------------------------
+                                           Total:        41.2 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2024.3.11-h06a4308_0
+  certifi            pkgs/main/linux-64::certifi-2022.12.7-py37h06a4308_0
+  libedit            pkgs/main/linux-64::libedit-3.1.20230828-h5eee18b_0
+  libffi             pkgs/main/linux-64::libffi-3.2.1-hf484d3e_1007
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+  openssl            pkgs/main/linux-64::openssl-1.1.1w-h7f8727e_0
+  pip                pkgs/main/linux-64::pip-22.3.1-py37h06a4308_0
+  python             pkgs/main/linux-64::python-3.7.2-h0371630_0
+  readline           pkgs/main/linux-64::readline-7.0-h7b6447c_5
+  setuptools         pkgs/main/linux-64::setuptools-65.6.3-py37h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.33.0-h62c20be_0
+  tk                 pkgs/main/linux-64::tk-8.6.14-h39e8969_0
+  wheel              pkgs/main/linux-64::wheel-0.38.4-py37h06a4308_0
+  xz                 pkgs/main/linux-64::xz-5.4.6-h5eee18b_1
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate retrievals
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) [912032971@n1 ~]$ conda activate retrievals
+(retrievals) [912032971@n1 ~]$ which gfortan
+/usr/bin/which: no gfortan in (/Users/912032971/miniconda3/envs/retrievals/bin:/Users/912032971/miniconda3/condabin:/Users/912032971/.local/bin:/Users/912032971/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/sbin:/bin)
+(retrievals) [912032971@n1 ~]$ module avail
+---------------------------------------------------- /usr/share/Modules/modulefiles -----------------------------------------------------
+dot  hmpt/2.28  module-git  module-info  modules  MPInside/4.2.57  mpiplace/2.00  mpt/2.28  null  perfboost  use.own
+
+-------------------------------------------------------- /usr/share/modulefiles ---------------------------------------------------------
+pmi/pmix-x86_64
+(retrievals) [912032971@n1 ~]$ which gcc
+/usr/bin/gcc
+(retrievals) [912032971@n1 ~]$ conda install scipy
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - scipy
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    blas-1.0                   |              mkl           6 KB
+    fftw-3.3.9                 |       h5eee18b_2         4.6 MB
+    intel-openmp-2021.4.0      |    h06a4308_3561         4.2 MB
+    libgfortran-ng-11.2.0      |       h00389a5_1          20 KB
+    libgfortran5-11.2.0        |       h1234567_1         2.0 MB
+    mkl-2021.4.0               |     h06a4308_640       142.6 MB
+    mkl-service-2.4.0          |   py37h7f8727e_0          56 KB
+    mkl_fft-1.3.1              |   py37hd3c417c_0         172 KB
+    mkl_random-1.2.2           |   py37h51133e4_0         287 KB
+    numpy-1.21.5               |   py37h6c91a56_3          10 KB
+    numpy-base-1.21.5          |   py37ha15fc14_3         4.8 MB
+    scipy-1.7.3                |   py37h6c91a56_2        16.5 MB
+    six-1.16.0                 |     pyhd3eb1b0_1          18 KB
+    ------------------------------------------------------------
+                                           Total:       175.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  blas               pkgs/main/linux-64::blas-1.0-mkl
+  fftw               pkgs/main/linux-64::fftw-3.3.9-h5eee18b_2
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2021.4.0-h06a4308_3561
+  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-11.2.0-h00389a5_1
+  libgfortran5       pkgs/main/linux-64::libgfortran5-11.2.0-h1234567_1
+  mkl                pkgs/main/linux-64::mkl-2021.4.0-h06a4308_640
+  mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py37h7f8727e_0
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.1-py37hd3c417c_0
+  mkl_random         pkgs/main/linux-64::mkl_random-1.2.2-py37h51133e4_0
+  numpy              pkgs/main/linux-64::numpy-1.21.5-py37h6c91a56_3
+  numpy-base         pkgs/main/linux-64::numpy-base-1.21.5-py37ha15fc14_3
+  scipy              pkgs/main/linux-64::scipy-1.7.3-py37h6c91a56_2
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$ client_loop: send disconnect: Broken pipe
+(base) AS-AST-318-ecg224:~ eileengonzales$
+
+
+
+
+
+
+
+  [Restored Jun 30, 2024 at 11:48:48 AM]
+Last login: Sun Jun 30 11:48:48 on ttys000
+Restored session: Sun Jun 30 11:47:45 PDT 2024
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AS-AST-318-ecg224:~ eileengonzales$
+  [Restored Jul 2, 2024 at 9:43:08 AM]
+Last login: Tue Jul  2 09:43:05 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AS-AST-318-ecg224:~ eileengonzales$
+  [Restored Jul 16, 2024 at 11:40:01 AM]
+Last login: Tue Jul 16 11:39:57 on console
+Restored session: Tue Jul 16 11:38:17 PDT 2024
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) dhcp-thornton214-99:~ eileengonzales$ ssh 912032971@n1.hpc.at.sfsu.edu
+912032971@n1.hpc.at.sfsu.edu's password:
+Connection closed by 130.212.15.150 port 22
+(base) dhcp-thornton214-99:~ eileengonzales$ ssh 912032971@n1.hpc.at.sfsu.edu
+912032971@n1.hpc.at.sfsu.edu's password:
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Fri May 31 12:51:03 2024 from 130.212.215.63
+(base) [912032971@n1 ~]$ ls
+miniconda3  Miniconda3-latest-Linux-x86_64.sh
+(base) [912032971@n1 ~]$ conda activate retrievals
+(retrievals) [912032971@n1 ~]$ conde env list
+bash: conde: command not found...
+(retrievals) [912032971@n1 ~]$ conda list
+# packages in environment at /Users/912032971/miniconda3/envs/retrievals:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main
+_openmp_mutex             5.1                       1_gnu
+blas                      1.0                         mkl
+ca-certificates           2024.3.11            h06a4308_0
+certifi                   2022.12.7        py37h06a4308_0
+fftw                      3.3.9                h5eee18b_2
+intel-openmp              2021.4.0          h06a4308_3561
+libedit                   3.1.20230828         h5eee18b_0
+libffi                    3.2.1             hf484d3e_1007
+libgcc-ng                 11.2.0               h1234567_1
+libgfortran-ng            11.2.0               h00389a5_1
+libgfortran5              11.2.0               h1234567_1
+libgomp                   11.2.0               h1234567_1
+libstdcxx-ng              11.2.0               h1234567_1
+mkl                       2021.4.0           h06a4308_640
+mkl-service               2.4.0            py37h7f8727e_0
+mkl_fft                   1.3.1            py37hd3c417c_0
+mkl_random                1.2.2            py37h51133e4_0
+ncurses                   6.4                  h6a678d5_0
+numpy                     1.21.5           py37h6c91a56_3
+numpy-base                1.21.5           py37ha15fc14_3
+openssl                   1.1.1w               h7f8727e_0
+pip                       22.3.1           py37h06a4308_0
+python                    3.7.2                h0371630_0
+readline                  7.0                  h7b6447c_5
+scipy                     1.7.3            py37h6c91a56_2
+setuptools                65.6.3           py37h06a4308_0
+six                       1.16.0             pyhd3eb1b0_1
+sqlite                    3.33.0               h62c20be_0
+tk                        8.6.14               h39e8969_0
+wheel                     0.38.4           py37h06a4308_0
+xz                        5.4.6                h5eee18b_1
+zlib                      1.2.13               h5eee18b_1
+(retrievals) [912032971@n1 ~]$ conda install scipy
+Retrieving notices: ...working... done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - scipy
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2024.7.2   |       h06a4308_0         127 KB
+    ------------------------------------------------------------
+                                           Total:         127 KB
+
+The following packages will be UPDATED:
+
+  ca-certificates                      2024.3.11-h06a4308_0 --> 2024.7.2-h06a4308_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$ conda install numpy
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+# All requested packages already installed.
+
+(retrievals) [912032971@n1 ~]$ conda install astropy
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - astropy
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    astropy-4.3.1              |   py37h09021b7_0         6.3 MB
+    brotli-1.0.9               |       h5eee18b_8          18 KB
+    brotli-bin-1.0.9           |       h5eee18b_8          19 KB
+    cycler-0.11.0              |     pyhd3eb1b0_0          12 KB
+    dbus-1.13.18               |       hb2f20db_0         504 KB
+    flit-core-3.6.0            |     pyhd3eb1b0_0          42 KB
+    fontconfig-2.14.1          |       h52c9d5c_1         281 KB
+    fonttools-4.25.0           |     pyhd3eb1b0_0         632 KB
+    freetype-2.12.1            |       h4a9f257_0         626 KB
+    giflib-5.2.1               |       h5eee18b_3          80 KB
+    glib-2.63.1                |       h5a9c865_0         2.9 MB
+    gst-plugins-base-1.14.0    |       hbbd80ab_1         4.8 MB
+    gstreamer-1.14.0           |       hb453b48_1         3.1 MB
+    icu-58.2                   |       he6710b0_3        10.5 MB
+    importlib-metadata-4.11.3  |   py37h06a4308_0          40 KB
+    jpeg-9e                    |       h5eee18b_1         262 KB
+    kiwisolver-1.4.4           |   py37h6a678d5_0          74 KB
+    lcms2-2.12                 |       h3be6417_0         312 KB
+    lerc-3.0                   |       h295c915_0         196 KB
+    libbrotlicommon-1.0.9      |       h5eee18b_8          69 KB
+    libbrotlidec-1.0.9         |       h5eee18b_8          31 KB
+    libbrotlienc-1.0.9         |       h5eee18b_8         286 KB
+    libdeflate-1.17            |       h5eee18b_1          64 KB
+    libpng-1.6.39              |       h5eee18b_0         304 KB
+    libtiff-4.5.1              |       h6a678d5_0         533 KB
+    libwebp-1.2.4              |       h11a3e52_1          86 KB
+    libwebp-base-1.2.4         |       h5eee18b_1         376 KB
+    libxcb-1.15                |       h7f8727e_0         505 KB
+    libxml2-2.9.14             |       h74e7548_0         718 KB
+    matplotlib-3.5.3           |   py37h06a4308_0           7 KB
+    matplotlib-base-3.5.3      |   py37hf590b9c_0         6.4 MB
+    munkres-1.1.4              |             py_0          13 KB
+    packaging-22.0             |   py37h06a4308_0          68 KB
+    pcre-8.45                  |       h295c915_0         207 KB
+    pillow-9.4.0               |   py37h6a678d5_0         721 KB
+    pyerfa-2.0.0               |   py37h27cfd23_0         342 KB
+    pyparsing-3.0.9            |   py37h06a4308_0         150 KB
+    pyqt-5.9.2                 |   py37h05f1152_2         4.5 MB
+    python-dateutil-2.8.2      |     pyhd3eb1b0_0         233 KB
+    pyyaml-6.0                 |   py37h5eee18b_1         185 KB
+    qt-5.9.7                   |       h5867ecd_1        68.5 MB
+    sip-4.19.8                 |   py37hf484d3e_0         274 KB
+    tornado-6.2                |   py37h5eee18b_0         584 KB
+    typing_extensions-4.4.0    |   py37h06a4308_0          45 KB
+    yaml-0.2.5                 |       h7b6447c_0          75 KB
+    zipp-3.11.0                |   py37h06a4308_0          19 KB
+    ------------------------------------------------------------
+                                           Total:       115.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  astropy            pkgs/main/linux-64::astropy-4.3.1-py37h09021b7_0
+  brotli             pkgs/main/linux-64::brotli-1.0.9-h5eee18b_8
+  brotli-bin         pkgs/main/linux-64::brotli-bin-1.0.9-h5eee18b_8
+  cycler             pkgs/main/noarch::cycler-0.11.0-pyhd3eb1b0_0
+  dbus               pkgs/main/linux-64::dbus-1.13.18-hb2f20db_0
+  expat              pkgs/main/linux-64::expat-2.6.2-h6a678d5_0
+  flit-core          pkgs/main/noarch::flit-core-3.6.0-pyhd3eb1b0_0
+  fontconfig         pkgs/main/linux-64::fontconfig-2.14.1-h52c9d5c_1
+  fonttools          pkgs/main/noarch::fonttools-4.25.0-pyhd3eb1b0_0
+  freetype           pkgs/main/linux-64::freetype-2.12.1-h4a9f257_0
+  giflib             pkgs/main/linux-64::giflib-5.2.1-h5eee18b_3
+  glib               pkgs/main/linux-64::glib-2.63.1-h5a9c865_0
+  gst-plugins-base   pkgs/main/linux-64::gst-plugins-base-1.14.0-hbbd80ab_1
+  gstreamer          pkgs/main/linux-64::gstreamer-1.14.0-hb453b48_1
+  icu                pkgs/main/linux-64::icu-58.2-he6710b0_3
+  importlib-metadata pkgs/main/linux-64::importlib-metadata-4.11.3-py37h06a4308_0
+  jpeg               pkgs/main/linux-64::jpeg-9e-h5eee18b_1
+  kiwisolver         pkgs/main/linux-64::kiwisolver-1.4.4-py37h6a678d5_0
+  lcms2              pkgs/main/linux-64::lcms2-2.12-h3be6417_0
+  lerc               pkgs/main/linux-64::lerc-3.0-h295c915_0
+  libbrotlicommon    pkgs/main/linux-64::libbrotlicommon-1.0.9-h5eee18b_8
+  libbrotlidec       pkgs/main/linux-64::libbrotlidec-1.0.9-h5eee18b_8
+  libbrotlienc       pkgs/main/linux-64::libbrotlienc-1.0.9-h5eee18b_8
+  libdeflate         pkgs/main/linux-64::libdeflate-1.17-h5eee18b_1
+  libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0
+  libtiff            pkgs/main/linux-64::libtiff-4.5.1-h6a678d5_0
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0
+  libwebp            pkgs/main/linux-64::libwebp-1.2.4-h11a3e52_1
+  libwebp-base       pkgs/main/linux-64::libwebp-base-1.2.4-h5eee18b_1
+  libxcb             pkgs/main/linux-64::libxcb-1.15-h7f8727e_0
+  libxml2            pkgs/main/linux-64::libxml2-2.9.14-h74e7548_0
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_1
+  matplotlib         pkgs/main/linux-64::matplotlib-3.5.3-py37h06a4308_0
+  matplotlib-base    pkgs/main/linux-64::matplotlib-base-3.5.3-py37hf590b9c_0
+  munkres            pkgs/main/noarch::munkres-1.1.4-py_0
+  packaging          pkgs/main/linux-64::packaging-22.0-py37h06a4308_0
+  pcre               pkgs/main/linux-64::pcre-8.45-h295c915_0
+  pillow             pkgs/main/linux-64::pillow-9.4.0-py37h6a678d5_0
+  pyerfa             pkgs/main/linux-64::pyerfa-2.0.0-py37h27cfd23_0
+  pyparsing          pkgs/main/linux-64::pyparsing-3.0.9-py37h06a4308_0
+  pyqt               pkgs/main/linux-64::pyqt-5.9.2-py37h05f1152_2
+  python-dateutil    pkgs/main/noarch::python-dateutil-2.8.2-pyhd3eb1b0_0
+  pyyaml             pkgs/main/linux-64::pyyaml-6.0-py37h5eee18b_1
+  qt                 pkgs/main/linux-64::qt-5.9.7-h5867ecd_1
+  sip                pkgs/main/linux-64::sip-4.19.8-py37hf484d3e_0
+  tornado            pkgs/main/linux-64::tornado-6.2-py37h5eee18b_0
+  typing_extensions  pkgs/main/linux-64::typing_extensions-4.4.0-py37h06a4308_0
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0
+  zipp               pkgs/main/linux-64::zipp-3.11.0-py37h06a4308_0
+  zstd               pkgs/main/linux-64::zstd-1.5.5-hc292b87_2
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$ conda install corner
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - corner
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(retrievals) [912032971@n1 ~]$ conda install matplotlib
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+# All requested packages already installed.
+
+(retrievals) [912032971@n1 ~]$ conda install pytest
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - pytest
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    attrs-22.1.0               |   py37h06a4308_0          84 KB
+    importlib_metadata-4.11.3  |       hd3eb1b0_0          12 KB
+    iniconfig-1.1.1            |     pyhd3eb1b0_0           8 KB
+    pluggy-1.0.0               |   py37h06a4308_1          29 KB
+    py-1.11.0                  |     pyhd3eb1b0_0          76 KB
+    pytest-7.1.2               |   py37h06a4308_0         445 KB
+    tomli-2.0.1                |   py37h06a4308_0          24 KB
+    ------------------------------------------------------------
+                                           Total:         678 KB
+
+The following NEW packages will be INSTALLED:
+
+  attrs              pkgs/main/linux-64::attrs-22.1.0-py37h06a4308_0
+  importlib_metadata pkgs/main/noarch::importlib_metadata-4.11.3-hd3eb1b0_0
+  iniconfig          pkgs/main/noarch::iniconfig-1.1.1-pyhd3eb1b0_0
+  pluggy             pkgs/main/linux-64::pluggy-1.0.0-py37h06a4308_1
+  py                 pkgs/main/noarch::py-1.11.0-pyhd3eb1b0_0
+  pytest             pkgs/main/linux-64::pytest-7.1.2-py37h06a4308_0
+  tomli              pkgs/main/linux-64::tomli-2.0.1-py37h06a4308_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$ conda install more-itertools
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - more-itertools
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    more-itertools-8.12.0      |     pyhd3eb1b0_0          49 KB
+    ------------------------------------------------------------
+                                           Total:          49 KB
+
+The following NEW packages will be INSTALLED:
+
+  more-itertools     pkgs/main/noarch::more-itertools-8.12.0-pyhd3eb1b0_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$ conda install schwimmbad
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - schwimmbad
+
+Current channels:
+
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(retrievals) [912032971@n1 ~]$ conda install mpi4py
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/912032971/miniconda3/envs/retrievals
+
+  added / updated specs:
+    - mpi4py
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    mpi-1.0                    |            mpich          13 KB
+    mpi4py-3.1.4               |   py37hfc96bbd_0         547 KB
+    mpich-3.3.2                |       external_0          15 KB
+    ------------------------------------------------------------
+                                           Total:         575 KB
+
+The following NEW packages will be INSTALLED:
+
+  mpi                pkgs/main/linux-64::mpi-1.0-mpich
+  mpi4py             pkgs/main/linux-64::mpi4py-3.1.4-py37hfc96bbd_0
+  mpich              pkgs/main/linux-64::mpich-3.3.2-external_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(retrievals) [912032971@n1 ~]$  git clone https://github.com/JohannesBuchner/PyMultiNest/
+bash:  git: command not found...
+(retrievals) [912032971@n1 ~]$ which Linux
+/usr/bin/which: no Linux in (/Users/912032971/miniconda3/envs/retrievals/bin:/Users/912032971/miniconda3/condabin:/Users/912032971/.local/bin:/Users/912032971/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/sbin:/bin)
+(retrievals) [912032971@n1 ~]$ sudo dnf install git-all
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for 912032971:
+912032971 is not in the sudoers file.  This incident will be reported.
+(retrievals) [912032971@n1 ~]$ 'gcc --version'
+bash: gcc --version: command not found...
+(retrievals) [912032971@n1 ~]$ gcc --version
+gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-20)
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+(retrievals) [912032971@n1 ~]$ module avail
+---------------------------------------------------- /usr/share/Modules/modulefiles -----------------------------------------------------
+dot  module-git  module-info  modules  null  use.own
+
+-------------------------------------------------------- /usr/share/modulefiles ---------------------------------------------------------
+mpi/openmpi-x86_64  pmi/pmix-x86_64
+(retrievals) [912032971@n1 ~]$ pip install corner
+Collecting corner
+  Downloading corner-2.2.1-py3-none-any.whl (15 kB)
+Requirement already satisfied: matplotlib>=2.1 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from corner) (3.5.3)
+Requirement already satisfied: fonttools>=4.22.0 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (4.25.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (1.4.4)
+Requirement already satisfied: pyparsing>=2.2.1 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (3.0.9)
+Requirement already satisfied: python-dateutil>=2.7 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (2.8.2)
+Requirement already satisfied: cycler>=0.10 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (0.11.0)
+Requirement already satisfied: pillow>=6.2.0 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (9.4.0)
+Requirement already satisfied: packaging>=20.0 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (22.0)
+Requirement already satisfied: numpy>=1.17 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from matplotlib>=2.1->corner) (1.21.5)
+Requirement already satisfied: typing-extensions in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from kiwisolver>=1.0.1->matplotlib>=2.1->corner) (4.4.0)
+Requirement already satisfied: six>=1.5 in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from python-dateutil>=2.7->matplotlib>=2.1->corner) (1.16.0)
+Installing collected packages: corner
+Successfully installed corner-2.2.1
+(retrievals) [912032971@n1 ~]$ pip install schwimmbad
+Collecting schwimmbad
+  Downloading schwimmbad-0.3.2.tar.gz (24 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Building wheels for collected packages: schwimmbad
+  Building wheel for schwimmbad (pyproject.toml) ... done
+  Created wheel for schwimmbad: filename=schwimmbad-0.3.2-py3-none-any.whl size=15729 sha256=1f15bc9e7ca80e126b1cf0d502cbbd9ee774e86e0429cce7e55ac05f13585f5c
+  Stored in directory: /Users/912032971/.cache/pip/wheels/b1/82/e1/c0e51960df9316e53da63a15e4c331e54dcc67203d15343f1b
+Successfully built schwimmbad
+Installing collected packages: schwimmbad
+Successfully installed schwimmbad-0.3.2
+(retrievals) [912032971@n1 ~]$ pip install emcee==3.0rc2
+Collecting emcee==3.0rc2
+  Downloading emcee-3.0rc2-py2.py3-none-any.whl (50 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.3/50.3 kB 2.3 MB/s eta 0:00:00
+Requirement already satisfied: numpy in ./miniconda3/envs/retrievals/lib/python3.7/site-packages (from emcee==3.0rc2) (1.21.5)
+Installing collected packages: emcee
+Successfully installed emcee-3.0rc2
+(retrievals) [912032971@n1 ~]$ ls
+miniconda3  Miniconda3-latest-Linux-x86_64.sh
+(retrievals) [912032971@n1 ~]$ mkdir brewster
+(retrievals) [912032971@n1 ~]$ ls
+brewster  miniconda3  Miniconda3-latest-Linux-x86_64.sh
+(retrievals) [912032971@n1 ~]$ cd brewster/
+(retrievals) [912032971@n1 brewster]$ ls
+2015_06_1060grid_feh_00_co_10.txt   DISORT.f                                  nug_example_script.sh
+2MASS-2MASS.H.dat                   dsolver.f                                 nug_template_script.sh
+2MASS-2MASS.J.dat                   dtridgl.f                                 phys_const_mod.f90
+570D_test_SLURM_script.sh           ErrPack.f                                 plot_Deck_NEST_TEMPLATE.ipynb
+atmos_ops_mod.f90                   final1_abel_CIA.dat                       plot_G395Honly_emcee_NC_vsini_TEMPLATE.ipynb
+band.py                             flux_calib.ipynb                          plot_postproduct_corner_TEMPLATE.ipynb
+bbconv.f90                          G570D_2MassJcalib.dat                     plot_Slab_NEST_TEMPLATE.ipynb
+BDREF.f                             G570D_2MHcalib.dat                        plot_template_No_Cloud_ChemicalEquilibrium.ipynb
+bensconv.py                         G570D_model_benchmark_PROFILE.dat         plot_template_No_clouds.ipynb
+bits_for_disort_f77.f               gaslist.dat                               plot_template_Slab89.ipynb
+brewster_G395H_template.py          gaslistR10K.dat                           RDI1MACH.f
+brewster_NESTED_TEMPLATE.py         gaslistR30K.dat                           read_cia.f90
+brewster_template.py                gaslistRox.dat                            README.md
+brewtools.py                        gas_opacity_mod.f90                       requirements.txt
+BTtemp800_45_13.dat                 gfluxi.f                                  rotBroadInt.py
+build                               LINPAK.f                                  settings.py
+check_brewster.py                   locate.f                                  setup_RT_mod.f90
+chem_eq_tables_P3K.pic              main_mod.f90                              sizes_mod.f90
+CIA_DS_aug_2015.dat                 make_a_spectrum_TEMPLATE.ipynb            STSci_Vega.txt
+cloudbook.xlsx                      Makefile                                  t750g1000nc_m0.0.cmp
+cloudlist.dat                       Makefile_NASA                             testkit.py
+cloudnest.py                        Makefile_UHcluster                        test_likelihood.ipynb
+cloudpost.f90                       marv.f90                                  test_nuggets.ipynb
+cloud_postprocessing_example.ipynb  mcnuggets_nc.py                           TPmod.py
+cloud_props.py                      mcnuggets_TEMPLATE.py                     tristan.f
+cloud.py                            Mie_cloud_1800K_model_benchmark_SPEC.dat  UH_PBS_script.sh
+clouds_mod.f90                      NASA_PBS_nuggets.sh                       UKIRT-UKIDSS.H.dat
+cloudtest.txt                       NASA_PBS_script.sh                        UKIRT-UKIDSS.J.dat
+code_test.py                        nestkit.py                                vega.txt
+common_arrays_mod.f90               No_cloud_800K_model_benchmark_SPEC.dat
+define_types_mod.f90                nugbits_TEMPLATE.py
+(retrievals) [912032971@n1 brewster]$ cd ../
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  miniconda3  Miniconda3-latest-Linux-x86_64.sh
+(retrievals) [912032971@n1 ~]$ d Clouds/
+bash: d: command not found...
+(retrievals) [912032971@n1 ~]$ cd Clouds/
+(retrievals) [912032971@n1 Clouds]$ ls
+ Al2O3.dhs             'Channon Visscher_cv_edit.docx'   Cr-middle.mieff     Cr-steep.mieff     Fe.mieff      'Icon'$'\r'
+ Al2O3.mieff            Cr.dhs                           Cr.mieff            Fe2O3_WS15.dhs     Fe-new.dhs    '#MgSiO3Cry.mieff#'
+ CaTiO3.mieff           Cr-flat.dhs                      Cr-original.dhs     Fe2O3_WS15.mieff   Fe-new.mieff   OLD
+ CaTiO3_WS15.refrind    Cr-flat.mieff                    Cr-original.mieff   Fe2SiO4.mieff      H2O.dhs
+ CaTiO3_WS15.refrind~   Cr-middle.dhs                    Cr-steep.dhs        Fe.dhs             H2O.mieff
+(retrievals) [912032971@n1 Clouds]$ cd ../
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh  PyMultiNest-master
+(retrievals) [912032971@n1 ~]$ cd PyMultiNest-master/
+(retrievals) [912032971@n1 PyMultiNest-master]$ python setup.py install
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/installer.py:30: SetuptoolsDeprecationWarning: setuptools.installer is deprecated. Requirements should be satisfied by a PEP 517 installer.
+  SetuptoolsDeprecationWarning,
+running install
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/easy_install.py:147: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  EasyInstallDeprecationWarning,
+running bdist_egg
+running egg_info
+creating pymultinest.egg-info
+writing pymultinest.egg-info/PKG-INFO
+writing dependency_links to pymultinest.egg-info/dependency_links.txt
+writing top-level names to pymultinest.egg-info/top_level.txt
+writing manifest file 'pymultinest.egg-info/SOURCES.txt'
+reading manifest file 'pymultinest.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'COPYING'
+writing manifest file 'pymultinest.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib
+creating build/lib/pymultinest
+copying pymultinest/plot.py -> build/lib/pymultinest
+copying pymultinest/analyse.py -> build/lib/pymultinest
+copying pymultinest/watch.py -> build/lib/pymultinest
+copying pymultinest/solve.py -> build/lib/pymultinest
+copying pymultinest/__init__.py -> build/lib/pymultinest
+copying pymultinest/run.py -> build/lib/pymultinest
+creating build/lib/pycuba
+copying pycuba/__init__.py -> build/lib/pycuba
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/plot.py -> build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/analyse.py -> build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/watch.py -> build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/solve.py -> build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/__init__.py -> build/bdist.linux-x86_64/egg/pymultinest
+copying build/lib/pymultinest/run.py -> build/bdist.linux-x86_64/egg/pymultinest
+creating build/bdist.linux-x86_64/egg/pycuba
+copying build/lib/pycuba/__init__.py -> build/bdist.linux-x86_64/egg/pycuba
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/plot.py to plot.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/analyse.py to analyse.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/watch.py to watch.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/solve.py to solve.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/__init__.py to __init__.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pymultinest/run.py to run.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/pycuba/__init__.py to __init__.cpython-37.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+installing scripts to build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+running install_scripts
+running build_scripts
+creating build/scripts-3.7
+copying and adjusting multinest_marginals.py -> build/scripts-3.7
+copying and adjusting multinest_marginals_corner.py -> build/scripts-3.7
+copying and adjusting multinest_marginals_fancy.py -> build/scripts-3.7
+changing mode of build/scripts-3.7/multinest_marginals.py from 644 to 755
+changing mode of build/scripts-3.7/multinest_marginals_corner.py from 644 to 755
+changing mode of build/scripts-3.7/multinest_marginals_fancy.py from 644 to 755
+creating build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/multinest_marginals.py -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/multinest_marginals_fancy.py -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/multinest_marginals_corner.py -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/multinest_marginals.py to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/multinest_marginals_fancy.py to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/multinest_marginals_corner.py to 755
+copying pymultinest.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pymultinest.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pymultinest.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pymultinest.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist/pymultinest-2.12-py3.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing pymultinest-2.12-py3.7.egg
+Copying pymultinest-2.12-py3.7.egg to /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages
+Adding pymultinest 2.12 to easy-install.pth file
+Installing multinest_marginals.py script to /Users/912032971/miniconda3/envs/retrievals/bin
+Installing multinest_marginals_corner.py script to /Users/912032971/miniconda3/envs/retrievals/bin
+Installing multinest_marginals_fancy.py script to /Users/912032971/miniconda3/envs/retrievals/bin
+
+Installed /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/pymultinest-2.12-py3.7.egg
+Processing dependencies for pymultinest==2.12
+Finished processing dependencies for pymultinest==2.12
+(retrievals) [912032971@n1 PyMultiNest-master]$ cd ../
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh  PyMultiNest-master
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh  MultiNest-master  PyMultiNest-master
+(retrievals) [912032971@n1 ~]$ cd MultiNest-master/
+(retrievals) [912032971@n1 MultiNest-master]$ cd MultiNest/build
+-bash: cd: MultiNest/build: No such file or directory
+(retrievals) [912032971@n1 MultiNest-master]$ cmake ..
+CMake Error: The source directory "/Users/912032971" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+(retrievals) [912032971@n1 MultiNest-master]$ cd ../
+(retrievals) [912032971@n1 ~]$ cd brewster/
+(retrievals) [912032971@n1 brewster]$ make clean
+rm -f *.o *.mod *.MOD f90wrap*  *.pyc *.pyf *.so
+(retrievals) [912032971@n1 brewster]$ ./build
+gfortran -O2 -fPIC -fbounds-check -frecord-marker=4 -fdefault-real-8 -fdefault-double-8 -std=legacy -I/usr/include -c *.f
+DISORT.f:602:53:
+
+             CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR-1, ANGCOS, SQT, YLM0 )
+                                                     1
+Warning: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar) [-Wargument-mismatch]
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c sizes_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c phys_const_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c define_types_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c common_arrays_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c atmos_ops_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c gas_opacity_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c clouds_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c setup_RT_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c main_mod.f90
+main_mod.f90:60:16:
+
+     disorting = use_disort
+                1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+main_mod.f90:61:13:
+
+     bfing  = do_bff
+             1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+gfortran -fPIC -shared -O2 *.o -o libmarvin.so
+f2py -m forwardmodel -h forwardmodel.pyf sizes_mod.f90 marv.f90
+Reading fortran codes...
+	Reading file 'sizes_mod.f90' (format:free)
+	Reading file 'marv.f90' (format:free)
+Post-processing...
+	Block: forwardmodel
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+In: :forwardmodel:marv.f90:marv
+get_useparameters: no module main info used by marv
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :forwardmodel:marv.f90:marv
+get_parameters:parameter 'nlinetemps' does not have value?!
+Post-processing (stage 2)...
+	Block: forwardmodel
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+Saving signatures to file "./forwardmodel.pyf"
+analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c libmarvin.so forwardmodel.pyf marv.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "forwardmodel" sources
+creating /tmp/tmp29or752_/src.linux-x86_64-3.7
+f2py options: []
+f2py: forwardmodel.pyf
+Reading fortran codes...
+	Reading file 'forwardmodel.pyf' (format:free)
+Post-processing...
+	Block: forwardmodel
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+In: forwardmodel.pyf:forwardmodel:unknown_interface:marv
+get_useparameters: no module main info used by marv
+Post-processing (stage 2)...
+	Block: forwardmodel
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+Building modules...
+	Building module "forwardmodel"...
+		Creating wrapper for Fortran subroutine "marv"("marv")...
+		Constructing wrapper function "marv"...
+		  outspec,cl_phot_press,oth_phot_press,cfunc = marv(temp,logg,r2d2,ingasnum,logvmr,pcover,do_clouds,incloudnum,cloudrad,cloudsig,cloudprof,inlinetemps,inpress,inwavenum,inlinelist,cia,ciatemps,use_disort,make_cl_pspec,make_oth_pspec,make_cf,do_bff,bff)
+		Constructing F90 module support for "sizes"...
+		  Variables: nclouds ngas npatch nlayers maxlayers nlinetemps nciatemps ncwave nrad nmiewave maxwave maxpatch nwave
+			Constructing wrapper function "sizes.initwave"...
+			  initwave(val)
+			Constructing wrapper function "sizes.initgas"...
+			  initgas(gasval)
+			Constructing wrapper function "sizes.initpatch"...
+			  initpatch(pval)
+			Constructing wrapper function "sizes.initcloud"...
+			  initcloud(pval)
+			Constructing wrapper function "sizes.initlayers"...
+			  initlayers(pval)
+			Constructing wrapper function "sizes.inittemps"...
+			  inittemps(pval)
+	Wrote C/API module "forwardmodel" to file "/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodelmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90"
+  adding '/tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmp29or752_/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmp29or752_/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmp29or752_/src.linux-x86_64-3.7
+  adding '/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'forwardmodel' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmp29or752_/tmp
+creating /tmp/tmp29or752_/tmp/tmp29or752_
+creating /tmp/tmp29or752_/tmp/tmp29or752_/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmp29or752_/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodelmodule.c
+gcc: /tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodelmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodelmodule.c:177:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmp29or752_/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: marv.f90
+marv.f90:66:11:
+
+   clphot = make_cl_pspec
+           1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+marv.f90:67:12:
+
+   othphot = make_oth_pspec
+            1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+marv.f90:68:10:
+
+   do_cf = make_cf
+          1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+gfortran:f90: /tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmp29or752_/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodelmodule.o /tmp/tmp29or752_/tmp/tmp29or752_/src.linux-x86_64-3.7/fortranobject.o /tmp/tmp29or752_/marv.o /tmp/tmp29or752_/tmp/tmp29or752_/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.o libmarvin.so -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./forwardmodel.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmp29or752_
+f2py -m ciamod -h ciamod.pyf sizes_mod.f90 read_cia.f90
+Reading fortran codes...
+	Reading file 'sizes_mod.f90' (format:free)
+	Reading file 'read_cia.f90' (format:free)
+Post-processing...
+	Block: ciamod
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :ciamod:read_cia.f90:read_cia
+get_parameters:parameter 'nciatemps' does not have value?!
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :ciamod:read_cia.f90:read_cia
+get_parameters:parameter 'ncwave' does not have value?!
+Post-processing (stage 2)...
+	Block: ciamod
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Saving signatures to file "./ciamod.pyf"
+f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c ciamod.pyf sizes_mod.f90 read_cia.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "ciamod" sources
+creating /tmp/tmp0xzjod00/src.linux-x86_64-3.7
+f2py options: []
+f2py: ciamod.pyf
+Reading fortran codes...
+	Reading file 'ciamod.pyf' (format:free)
+Post-processing...
+	Block: ciamod
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Post-processing (stage 2)...
+	Block: ciamod
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Building modules...
+	Building module "ciamod"...
+		Creating wrapper for Fortran subroutine "read_cia"("read_cia")...
+		Constructing wrapper function "read_cia"...
+		  outcia,ciatemps = read_cia(filename,wavenum)
+		Constructing F90 module support for "sizes"...
+		  Variables: nclouds ngas npatch nlayers maxlayers nlinetemps nciatemps ncwave nrad nmiewave maxwave maxpatch nwave
+			Constructing wrapper function "sizes.initwave"...
+			  initwave(val)
+			Constructing wrapper function "sizes.initgas"...
+			  initgas(gasval)
+			Constructing wrapper function "sizes.initpatch"...
+			  initpatch(pval)
+			Constructing wrapper function "sizes.initcloud"...
+			  initcloud(pval)
+			Constructing wrapper function "sizes.initlayers"...
+			  initlayers(pval)
+			Constructing wrapper function "sizes.inittemps"...
+			  inittemps(pval)
+	Wrote C/API module "ciamod" to file "/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamodmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90"
+  adding '/tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmp0xzjod00/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmp0xzjod00/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmp0xzjod00/src.linux-x86_64-3.7
+  adding '/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'ciamod' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmp0xzjod00/tmp
+creating /tmp/tmp0xzjod00/tmp/tmp0xzjod00
+creating /tmp/tmp0xzjod00/tmp/tmp0xzjod00/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmp0xzjod00/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamodmodule.c
+gcc: /tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamodmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamodmodule.c:170:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran 90 module sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmp0xzjod00/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+extra options: '-J/tmp/tmp0xzjod00/ -I/tmp/tmp0xzjod00/'
+gfortran:f90: sizes_mod.f90
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmp0xzjod00/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+extra options: '-J/tmp/tmp0xzjod00/ -I/tmp/tmp0xzjod00/'
+gfortran:f90: read_cia.f90
+gfortran:f90: /tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmp0xzjod00/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamodmodule.o /tmp/tmp0xzjod00/tmp/tmp0xzjod00/src.linux-x86_64-3.7/fortranobject.o /tmp/tmp0xzjod00/sizes_mod.o /tmp/tmp0xzjod00/read_cia.o /tmp/tmp0xzjod00/tmp/tmp0xzjod00/src.linux-x86_64-3.7/ciamod-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./ciamod.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmp0xzjod00
+f2py -m bbconv -h bbconv.pyf bbconv.f90
+Reading fortran codes...
+	Reading file 'bbconv.f90' (format:free)
+Post-processing...
+	Block: bbconv
+			Block: prism
+			Block: convfwhm
+			Block: convr
+Post-processing (stage 2)...
+Saving signatures to file "./bbconv.pyf"
+f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c bbconv.pyf bbconv.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "bbconv" sources
+creating /tmp/tmpucb66eej/src.linux-x86_64-3.7
+f2py options: []
+f2py: bbconv.pyf
+Reading fortran codes...
+	Reading file 'bbconv.pyf' (format:free)
+Post-processing...
+	Block: bbconv
+			Block: prism
+			Block: convfwhm
+			Block: convr
+Post-processing (stage 2)...
+Building modules...
+	Building module "bbconv"...
+		Creating wrapper for Fortran subroutine "prism"("prism")...
+		Constructing wrapper function "prism"...
+		  fratio_int = prism(obspec,modspec,resel)
+		Creating wrapper for Fortran subroutine "convfwhm"("convfwhm")...
+		Constructing wrapper function "convfwhm"...
+		  fratio_int = convfwhm(obspec,modspec,fwhm)
+		Creating wrapper for Fortran subroutine "convr"("convr")...
+		Constructing wrapper function "convr"...
+		  fratio_int = convr(obspec,modspec,r)
+	Wrote C/API module "bbconv" to file "/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconvmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90"
+  adding '/tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmpucb66eej/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpucb66eej/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpucb66eej/src.linux-x86_64-3.7
+  adding '/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'bbconv' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpucb66eej/tmp
+creating /tmp/tmpucb66eej/tmp/tmpucb66eej
+creating /tmp/tmpucb66eej/tmp/tmpucb66eej/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmpucb66eej/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconvmodule.c
+gcc: /tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconvmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconvmodule.c:137:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpucb66eej/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: bbconv.f90
+gfortran:f90: /tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpucb66eej/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconvmodule.o /tmp/tmpucb66eej/tmp/tmpucb66eej/src.linux-x86_64-3.7/fortranobject.o /tmp/tmpucb66eej/bbconv.o /tmp/tmpucb66eej/tmp/tmpucb66eej/src.linux-x86_64-3.7/bbconv-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./bbconv.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmpucb66eej
+f2py -m cloudpost -h cloudpost.pyf cloudpost.f90
+Reading fortran codes...
+	Reading file 'cloudpost.f90' (format:free)
+Post-processing...
+	Block: cloudpost
+			Block: properties
+Post-processing (stage 2)...
+Saving signatures to file "./cloudpost.pyf"
+analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.f2py --fcompiler=gfortran --f90flags="-O2 -fPIC -frecord-marker=4 -fbounds-check " -I/usr/include -L/usr/local/lib -c cloudpost.pyf cloudpost.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "cloudpost" sources
+creating /tmp/tmppxqxgwfb/src.linux-x86_64-3.7
+f2py options: []
+f2py: cloudpost.pyf
+Reading fortran codes...
+	Reading file 'cloudpost.pyf' (format:free)
+Post-processing...
+	Block: cloudpost
+			Block: properties
+Post-processing (stage 2)...
+Building modules...
+	Building module "cloudpost"...
+		Creating wrapper for Fortran subroutine "properties"("properties")...
+		Constructing wrapper function "properties"...
+		  tau1_cloud,mass_cloud,num_cloud = properties(press,wavenum,nclouds,do_clouds,cloudnum,cloudprof,cloudrad,cloudsig)
+	Wrote C/API module "cloudpost" to file "/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpostmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90"
+  adding '/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmppxqxgwfb/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmppxqxgwfb/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmppxqxgwfb/src.linux-x86_64-3.7
+  adding '/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'cloudpost' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmppxqxgwfb/tmp
+creating /tmp/tmppxqxgwfb/tmp/tmppxqxgwfb
+creating /tmp/tmppxqxgwfb/tmp/tmppxqxgwfb/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmppxqxgwfb/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpostmodule.c
+gcc: /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpostmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpostmodule.c:137:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -frecord-marker=4 -fbounds-check -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -frecord-marker=4 -fbounds-check -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmppxqxgwfb/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: cloudpost.f90
+gfortran:f90: /tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmppxqxgwfb/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpostmodule.o /tmp/tmppxqxgwfb/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/fortranobject.o /tmp/tmppxqxgwfb/cloudpost.o /tmp/tmppxqxgwfb/tmp/tmppxqxgwfb/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./cloudpost.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmppxqxgwfb
+(retrievals) [912032971@n1 brewster]$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Users/912032971/brewster
+(retrievals) [912032971@n1 brewster]$ python check_brewster.py
+Traceback (most recent call last):
+  File "check_brewster.py", line 6, in <module>
+    results = [ct.NoCloud_Tdwarf(xpath,xlist),ct.MieClouds_Ldwarf(xpath,xlist)]
+  File "/Users/912032971/brewster/code_test.py", line 136, in NoCloud_Tdwarf
+    inlinetemps,inwavenum,linelist,gasnum,nwave = testkit.get_opacities(gaslist,w1,w2,press,xpath,xlist,malk)
+  File "/Users/912032971/brewster/testkit.py", line 1401, in get_opacities
+    rawwavenum, inpress, inlinetemps, inlinelist = pickle.load(open(lists[0], "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/Volumes/DudleyDisk/LineLists/h2o_ucl2017_xsecs_R10K.pic'
+(retrievals) [912032971@n1 brewster]$ nano code_test.py
+(retrievals) [912032971@n1 brewster]$ nano check_brewster.py
+(retrievals) [912032971@n1 brewster]$ python check_brewster.py
+Traceback (most recent call last):
+  File "check_brewster.py", line 6, in <module>
+    results = [ct.NoCloud_Tdwarf(xpath,xlist),ct.MieClouds_Ldwarf(xpath,xlist)]
+  File "/Users/912032971/brewster/code_test.py", line 136, in NoCloud_Tdwarf
+    inlinetemps,inwavenum,linelist,gasnum,nwave = testkit.get_opacities(gaslist,w1,w2,press,xpath,xlist,malk)
+  File "/Users/912032971/brewster/testkit.py", line 1401, in get_opacities
+    rawwavenum, inpress, inlinetemps, inlinelist = pickle.load(open(lists[0], "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/LineLists/h2o_ucl2017_xsecs_R10K.pic'
+(retrievals) [912032971@n1 brewster]$ cd ../Linelists/
+(retrievals) [912032971@n1 Linelists]$ ls
+ Archive.zip                    feh_xsecs_R10K.pic             mgh_xsecs_R10K.pic             R30Kopacities
+ cah_xsecs_R10K.pic             h2o_ucl2017_xsecs_R10K.pic     Na_2021_NewTP_xsecs_R10K.pic   R30Kopacities.tar.gz
+ ch4_xsecs_R10K.pic             h2o_xsecs_R10K.pic             Na_2021_xsecs_R10K.pic         Rb_2021_NewTP_xsecs_R10K.pic
+ chem_eq_tables_P3K.pic         h2s_xsecs_R10K.pic             Na_Mike_xsecs_R10K.pic         Rb_2021_xsecs_R10K.pic
+ co2_xsecs_R10K.pic             K_2021_NewTP_xsecs_R10K.pic    Na_xsecs_R10K.pic              Rb_xsecs_R10K.pic
+ co_xsecs_R10K.pic              K_2021_xsecs_R10K.pic          nh3_xsecs_R10K.pic             Rox_new_xsecs.tar
+ crh_xsecs_R10K.pic             K_Mike_xsecs_R10K.pic          ph3_xsecs_R10K.pic             tio_xsecs_R10K.pic
+ Cs_2021_NewTP_xsecs_R10K.pic   K_xsecs_R10K.pic               PY3_crh_xsecs_R10K.pic         vo_xsecs_R10K.pic
+ Cs_2021_xsecs_R10K.pic         Li_2021_NewTP_xsecs_R10K.pic   PY3_linepickles
+ Cs_xsecs_R10K.pic              Li_2021_xsecs_R10K.pic        'PY3_linepickles 2'
+ feh.tar.gz                     Li_xsecs_R10K.pic              PY3_linepickles.tar
+(retrievals) [912032971@n1 Linelists]$ cd ../
+(retrievals) [912032971@n1 ~]$ cd brewster/
+(retrievals) [912032971@n1 brewster]$ nano check_brewster.py
+(retrievals) [912032971@n1 brewster]$ python check_brewster.py
+Traceback (most recent call last):
+  File "check_brewster.py", line 6, in <module>
+    results = [ct.NoCloud_Tdwarf(xpath,xlist),ct.MieClouds_Ldwarf(xpath,xlist)]
+  File "/Users/912032971/brewster/code_test.py", line 136, in NoCloud_Tdwarf
+    inlinetemps,inwavenum,linelist,gasnum,nwave = testkit.get_opacities(gaslist,w1,w2,press,xpath,xlist,malk)
+  File "/Users/912032971/brewster/testkit.py", line 1401, in get_opacities
+    rawwavenum, inpress, inlinetemps, inlinelist = pickle.load(open(lists[0], "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '../LineLists/h2o_ucl2017_xsecs_R10K.pic'
+(retrievals) [912032971@n1 brewster]$ nano check_brewster.py
+(retrievals) [912032971@n1 brewster]$ python check_brewster.py
+Traceback (most recent call last):
+  File "check_brewster.py", line 6, in <module>
+    results = [ct.NoCloud_Tdwarf(xpath,xlist),ct.MieClouds_Ldwarf(xpath,xlist)]
+  File "/Users/912032971/brewster/code_test.py", line 136, in NoCloud_Tdwarf
+    inlinetemps,inwavenum,linelist,gasnum,nwave = testkit.get_opacities(gaslist,w1,w2,press,xpath,xlist,malk)
+  File "/Users/912032971/brewster/testkit.py", line 1401, in get_opacities
+    rawwavenum, inpress, inlinetemps, inlinelist = pickle.load(open(lists[0], "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/912032971/LineLists/h2o_ucl2017_xsecs_R10K.pic'
+(retrievals) [912032971@n1 brewster]$ cd ../
+(retrievals) [912032971@n1 ~]$ pwd
+/Users/912032971
+(retrievals) [912032971@n1 ~]$ cd Linelists/
+(retrievals) [912032971@n1 Linelists]$ pwd
+/Users/912032971/Linelists
+(retrievals) [912032971@n1 Linelists]$ cd ../
+(retrievals) [912032971@n1 ~]$ cd brewster/
+(retrievals) [912032971@n1 brewster]$ nano check_brewster.py
+(retrievals) [912032971@n1 brewster]$ python check_brewster.py
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+------------------------------------------------------------
+ Test for T dwarf case, forward model only, No clouds
+------------------------------------------------------
+mean value of modelspectrum / T benchmark = 0.9999999820866847
+std deviation of modelspectrum / T benchmark = 5.966934924391658e-08
+less than 1percent difference with T dwarf regime benchmark
+-------------------------------------------------------
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+------------------------------------------------------------
+ Test for L dwarf case, plotting via theta and testkit
+ theta taken from 2M2224 case with Mie clouds
+ crystalline enstatite slab + rust deck
+ optical data as at February 2020 in benchmark spectrum
+------------------------------------------------------
+mean value of modelspectrum / L benchmark = 1.0000130384013122
+std deviation of modelspectrum / L benchmark = 0.012520925318536725
+less than 1percent difference with L dwarf regime benchmark
+-------------------------------------------------------
+
+------------------------------------------------------------
+Everything is as it was. No >1% differences with benchmark cases
+(retrievals) [912032971@n1 brewster]$ sinfo
+PARTITION   AVAIL  TIMELIMIT  NODES  STATE NODELIST
+cpucluster*    up   12:00:00      2   idle lmn[01-02]
+cputest        up    1:00:00      1   idle hmn01
+gpucluster     up    4:00:00      1   idle gpu01
+(retrievals) [912032971@n1 brewster]$ cd ../
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh  MultiNest-master  PyMultiNest-master
+(retrievals) [912032971@n1 ~]$ makedir Brewster_Ydwarfs
+bash: makedir: command not found...
+(retrievals) [912032971@n1 ~]$ mkdir Brewster_Ydwarfs
+(retrievals) [912032971@n1 ~]$ ls
+brewster  Brewster_Ydwarfs  Clouds  Linelists  miniconda3  Miniconda3-latest-Linux-x86_64.sh  MultiNest-master  PyMultiNest-master
+(retrievals) [912032971@n1 ~]$ cd Brewster_Ydwarfs/
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ make clean
+rm -f *.o *.mod *.MOD f90wrap*  *.pyc *.pyf *.so
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ ./build
+gfortran -O2 -fPIC -fbounds-check -frecord-marker=4 -fdefault-real-8 -fdefault-double-8 -std=legacy -I/usr/include -c *.f
+DISORT.f:602:53:
+
+             CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR-1, ANGCOS, SQT, YLM0 )
+                                                     1
+Warning: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar) [-Wargument-mismatch]
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c sizes_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c phys_const_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c define_types_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c common_arrays_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c atmos_ops_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c gas_opacity_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c clouds_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c setup_RT_mod.f90
+gfortran -O2 -fPIC -ffree-line-length-none -frecord-marker=4 -fbounds-check  -I/usr/include -c main_mod.f90
+main_mod.f90:60:16:
+
+     disorting = use_disort
+                1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+main_mod.f90:61:13:
+
+     bfing  = do_bff
+             1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+gfortran -fPIC -shared -O2 *.o -o libmarvin.so
+f2py -m forwardmodel -h forwardmodel.pyf sizes_mod.f90 marv.f90
+Reading fortran codes...
+	Reading file 'sizes_mod.f90' (format:free)
+	Reading file 'marv.f90' (format:free)
+Post-processing...
+	Block: forwardmodel
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+In: :forwardmodel:marv.f90:marv
+get_useparameters: no module main info used by marv
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :forwardmodel:marv.f90:marv
+get_parameters:parameter 'nlinetemps' does not have value?!
+Post-processing (stage 2)...
+	Block: forwardmodel
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+Saving signatures to file "./forwardmodel.pyf"
+analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c libmarvin.so forwardmodel.pyf marv.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "forwardmodel" sources
+creating /tmp/tmpqpg_gii0/src.linux-x86_64-3.7
+f2py options: []
+f2py: forwardmodel.pyf
+Reading fortran codes...
+	Reading file 'forwardmodel.pyf' (format:free)
+Post-processing...
+	Block: forwardmodel
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+In: forwardmodel.pyf:forwardmodel:unknown_interface:marv
+get_useparameters: no module main info used by marv
+Post-processing (stage 2)...
+	Block: forwardmodel
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: marv
+Building modules...
+	Building module "forwardmodel"...
+		Creating wrapper for Fortran subroutine "marv"("marv")...
+		Constructing wrapper function "marv"...
+		  outspec,cl_phot_press,oth_phot_press,cfunc = marv(temp,logg,r2d2,ingasnum,logvmr,pcover,do_clouds,incloudnum,cloudrad,cloudsig,cloudprof,inlinetemps,inpress,inwavenum,inlinelist,cia,ciatemps,use_disort,make_cl_pspec,make_oth_pspec,make_cf,do_bff,bff)
+		Constructing F90 module support for "sizes"...
+		  Variables: nclouds ngas npatch nlayers maxlayers nlinetemps nciatemps ncwave nrad nmiewave maxwave maxpatch nwave
+			Constructing wrapper function "sizes.initwave"...
+			  initwave(val)
+			Constructing wrapper function "sizes.initgas"...
+			  initgas(gasval)
+			Constructing wrapper function "sizes.initpatch"...
+			  initpatch(pval)
+			Constructing wrapper function "sizes.initcloud"...
+			  initcloud(pval)
+			Constructing wrapper function "sizes.initlayers"...
+			  initlayers(pval)
+			Constructing wrapper function "sizes.inittemps"...
+			  inittemps(pval)
+	Wrote C/API module "forwardmodel" to file "/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodelmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90"
+  adding '/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmpqpg_gii0/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpqpg_gii0/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpqpg_gii0/src.linux-x86_64-3.7
+  adding '/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'forwardmodel' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpqpg_gii0/tmp
+creating /tmp/tmpqpg_gii0/tmp/tmpqpg_gii0
+creating /tmp/tmpqpg_gii0/tmp/tmpqpg_gii0/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmpqpg_gii0/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodelmodule.c
+gcc: /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodelmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodelmodule.c:177:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpqpg_gii0/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: marv.f90
+marv.f90:66:11:
+
+   clphot = make_cl_pspec
+           1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+marv.f90:67:12:
+
+   othphot = make_oth_pspec
+            1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+marv.f90:68:10:
+
+   do_cf = make_cf
+          1
+Warning: Extension: Conversion from INTEGER(4) to LOGICAL(4) at (1)
+gfortran:f90: /tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpqpg_gii0/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodelmodule.o /tmp/tmpqpg_gii0/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/fortranobject.o /tmp/tmpqpg_gii0/marv.o /tmp/tmpqpg_gii0/tmp/tmpqpg_gii0/src.linux-x86_64-3.7/forwardmodel-f2pywrappers2.o libmarvin.so -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./forwardmodel.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmpqpg_gii0
+f2py -m ciamod -h ciamod.pyf sizes_mod.f90 read_cia.f90
+Reading fortran codes...
+	Reading file 'sizes_mod.f90' (format:free)
+	Reading file 'read_cia.f90' (format:free)
+Post-processing...
+	Block: ciamod
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :ciamod:read_cia.f90:read_cia
+get_parameters:parameter 'nciatemps' does not have value?!
+{'typespec': 'integer', 'attrspec': ['parameter']}
+In: :ciamod:read_cia.f90:read_cia
+get_parameters:parameter 'ncwave' does not have value?!
+Post-processing (stage 2)...
+	Block: ciamod
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Saving signatures to file "./ciamod.pyf"
+f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c ciamod.pyf sizes_mod.f90 read_cia.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "ciamod" sources
+creating /tmp/tmpy9eks50z/src.linux-x86_64-3.7
+f2py options: []
+f2py: ciamod.pyf
+Reading fortran codes...
+	Reading file 'ciamod.pyf' (format:free)
+Post-processing...
+	Block: ciamod
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Post-processing (stage 2)...
+	Block: ciamod
+		Block: unknown_interface
+			Block: sizes
+				Block: initwave
+				Block: initgas
+				Block: initpatch
+				Block: initcloud
+				Block: initlayers
+				Block: inittemps
+			Block: read_cia
+Building modules...
+	Building module "ciamod"...
+		Creating wrapper for Fortran subroutine "read_cia"("read_cia")...
+		Constructing wrapper function "read_cia"...
+		  outcia,ciatemps = read_cia(filename,wavenum)
+		Constructing F90 module support for "sizes"...
+		  Variables: nclouds ngas npatch nlayers maxlayers nlinetemps nciatemps ncwave nrad nmiewave maxwave maxpatch nwave
+			Constructing wrapper function "sizes.initwave"...
+			  initwave(val)
+			Constructing wrapper function "sizes.initgas"...
+			  initgas(gasval)
+			Constructing wrapper function "sizes.initpatch"...
+			  initpatch(pval)
+			Constructing wrapper function "sizes.initcloud"...
+			  initcloud(pval)
+			Constructing wrapper function "sizes.initlayers"...
+			  initlayers(pval)
+			Constructing wrapper function "sizes.inittemps"...
+			  inittemps(pval)
+	Wrote C/API module "ciamod" to file "/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamodmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90"
+  adding '/tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmpy9eks50z/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpy9eks50z/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpy9eks50z/src.linux-x86_64-3.7
+  adding '/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'ciamod' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpy9eks50z/tmp
+creating /tmp/tmpy9eks50z/tmp/tmpy9eks50z
+creating /tmp/tmpy9eks50z/tmp/tmpy9eks50z/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmpy9eks50z/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamodmodule.c
+gcc: /tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamodmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamodmodule.c:170:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran 90 module sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpy9eks50z/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+extra options: '-J/tmp/tmpy9eks50z/ -I/tmp/tmpy9eks50z/'
+gfortran:f90: sizes_mod.f90
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpy9eks50z/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+extra options: '-J/tmp/tmpy9eks50z/ -I/tmp/tmpy9eks50z/'
+gfortran:f90: read_cia.f90
+gfortran:f90: /tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamod-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpy9eks50z/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamodmodule.o /tmp/tmpy9eks50z/tmp/tmpy9eks50z/src.linux-x86_64-3.7/fortranobject.o /tmp/tmpy9eks50z/sizes_mod.o /tmp/tmpy9eks50z/read_cia.o /tmp/tmpy9eks50z/tmp/tmpy9eks50z/src.linux-x86_64-3.7/ciamod-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./ciamod.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmpy9eks50z
+f2py -m bbconv -h bbconv.pyf bbconv.f90
+Reading fortran codes...
+	Reading file 'bbconv.f90' (format:free)
+Post-processing...
+	Block: bbconv
+			Block: prism
+			Block: convfwhm
+			Block: convr
+Post-processing (stage 2)...
+Saving signatures to file "./bbconv.pyf"
+f2py --fcompiler=gfortran --f90flags="-O2" -I/usr/include -L/usr/local/lib -c bbconv.pyf bbconv.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "bbconv" sources
+creating /tmp/tmpm0ns47hq/src.linux-x86_64-3.7
+f2py options: []
+f2py: bbconv.pyf
+Reading fortran codes...
+	Reading file 'bbconv.pyf' (format:free)
+Post-processing...
+	Block: bbconv
+			Block: prism
+			Block: convfwhm
+			Block: convr
+Post-processing (stage 2)...
+Building modules...
+	Building module "bbconv"...
+		Creating wrapper for Fortran subroutine "prism"("prism")...
+		Constructing wrapper function "prism"...
+		  fratio_int = prism(obspec,modspec,resel)
+		Creating wrapper for Fortran subroutine "convfwhm"("convfwhm")...
+		Constructing wrapper function "convfwhm"...
+		  fratio_int = convfwhm(obspec,modspec,fwhm)
+		Creating wrapper for Fortran subroutine "convr"("convr")...
+		Constructing wrapper function "convr"...
+		  fratio_int = convr(obspec,modspec,r)
+	Wrote C/API module "bbconv" to file "/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconvmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90"
+  adding '/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmpm0ns47hq/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpm0ns47hq/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpm0ns47hq/src.linux-x86_64-3.7
+  adding '/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'bbconv' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpm0ns47hq/tmp
+creating /tmp/tmpm0ns47hq/tmp/tmpm0ns47hq
+creating /tmp/tmpm0ns47hq/tmp/tmpm0ns47hq/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmpm0ns47hq/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconvmodule.c
+gcc: /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconvmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconvmodule.c:137:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpm0ns47hq/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: bbconv.f90
+gfortran:f90: /tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconv-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpm0ns47hq/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconvmodule.o /tmp/tmpm0ns47hq/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/fortranobject.o /tmp/tmpm0ns47hq/bbconv.o /tmp/tmpm0ns47hq/tmp/tmpm0ns47hq/src.linux-x86_64-3.7/bbconv-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./bbconv.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmpm0ns47hq
+f2py -m cloudpost -h cloudpost.pyf cloudpost.f90
+Reading fortran codes...
+	Reading file 'cloudpost.f90' (format:free)
+Post-processing...
+	Block: cloudpost
+			Block: properties
+Post-processing (stage 2)...
+Saving signatures to file "./cloudpost.pyf"
+analyzevars: charselector={'len': '15'} unhandled.analyzevars: charselector={'len': '15'} unhandled.f2py --fcompiler=gfortran --f90flags="-O2 -fPIC -frecord-marker=4 -fbounds-check " -I/usr/include -L/usr/local/lib -c cloudpost.pyf cloudpost.f90
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "cloudpost" sources
+creating /tmp/tmpux95wipe/src.linux-x86_64-3.7
+f2py options: []
+f2py: cloudpost.pyf
+Reading fortran codes...
+	Reading file 'cloudpost.pyf' (format:free)
+Post-processing...
+	Block: cloudpost
+			Block: properties
+Post-processing (stage 2)...
+Building modules...
+	Building module "cloudpost"...
+		Creating wrapper for Fortran subroutine "properties"("properties")...
+		Constructing wrapper function "properties"...
+		  tau1_cloud,mass_cloud,num_cloud = properties(press,wavenum,nclouds,do_clouds,cloudnum,cloudprof,cloudrad,cloudsig)
+	Wrote C/API module "cloudpost" to file "/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpostmodule.c"
+	Fortran 90 wrappers are saved to "/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90"
+  adding '/tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.c' to sources.
+  adding '/tmp/tmpux95wipe/src.linux-x86_64-3.7' to include_dirs.
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpux95wipe/src.linux-x86_64-3.7
+copying /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpux95wipe/src.linux-x86_64-3.7
+  adding '/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  setuptools.SetuptoolsDeprecationWarning,
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'cloudpost' extension
+compiling C sources
+C compiler: gcc -pthread -B /Users/912032971/miniconda3/envs/retrievals/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpux95wipe/tmp
+creating /tmp/tmpux95wipe/tmp/tmpux95wipe
+creating /tmp/tmpux95wipe/tmp/tmpux95wipe/src.linux-x86_64-3.7
+compile options: '-DNPY_DISABLE_OPTIMIZATION=1 -I/usr/include -I/tmp/tmpux95wipe/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gcc: /tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpostmodule.c
+gcc: /tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.c
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.c:2:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+In file included from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:1,
+                 from /Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.h:13,
+                 from /tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpostmodule.c:16:
+/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning:#warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
+/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpostmodule.c:137:12: warning: ‘f2py_size’ defined but not used [-Wunused-function]
+ static int f2py_size(PyArrayObject* var, ...)
+            ^~~~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -O2 -fPIC -frecord-marker=4 -fbounds-check -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -O2 -fPIC -frecord-marker=4 -fbounds-check -fPIC -O3 -funroll-loops
+compile options: '-I/usr/include -I/tmp/tmpux95wipe/src.linux-x86_64-3.7 -I/Users/912032971/miniconda3/envs/retrievals/lib/python3.7/site-packages/numpy/core/include -I/Users/912032971/miniconda3/envs/retrievals/include/python3.7m -c'
+gfortran:f90: cloudpost.f90
+gfortran:f90: /tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.f90
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpux95wipe/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpostmodule.o /tmp/tmpux95wipe/tmp/tmpux95wipe/src.linux-x86_64-3.7/fortranobject.o /tmp/tmpux95wipe/cloudpost.o /tmp/tmpux95wipe/tmp/tmpux95wipe/src.linux-x86_64-3.7/cloudpost-f2pywrappers2.o -L/usr/local/lib -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8 -lgfortran -o ./cloudpost.cpython-37m-x86_64-linux-gnu.so
+Removing build directory /tmp/tmpux95wipe
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ nano check_brewster.py
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ python check_brewster.py
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+------------------------------------------------------------
+ Test for T dwarf case, forward model only, No clouds
+------------------------------------------------------
+mean value of modelspectrum / T benchmark = 0.9999999820866847
+std deviation of modelspectrum / T benchmark = 5.966934924391658e-08
+less than 1percent difference with T dwarf regime benchmark
+-------------------------------------------------------
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+------------------------------------------------------------
+ Test for L dwarf case, plotting via theta and testkit
+ theta taken from 2M2224 case with Mie clouds
+ crystalline enstatite slab + rust deck
+ optical data as at February 2020 in benchmark spectrum
+------------------------------------------------------
+mean value of modelspectrum / L benchmark = 1.0000130384013122
+std deviation of modelspectrum / L benchmark = 0.012520925318536725
+less than 1percent difference with L dwarf regime benchmark
+-------------------------------------------------------
+
+------------------------------------------------------------
+Everything is as it was. No >1% differences with benchmark cases
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ cd ../Linelists/
+(retrievals) [912032971@n1 Linelists]$ ls
+ Archive.zip                    feh_xsecs_R10K.pic             mgh_xsecs_R10K.pic             R30Kopacities
+ cah_xsecs_R10K.pic             h2o_ucl2017_xsecs_R10K.pic     Na_2021_NewTP_xsecs_R10K.pic   R30Kopacities.tar.gz
+ ch4_xsecs_R10K.pic             h2o_xsecs_R10K.pic             Na_2021_xsecs_R10K.pic         Rb_2021_NewTP_xsecs_R10K.pic
+ chem_eq_tables_P3K.pic         h2s_xsecs_R10K.pic             Na_Mike_xsecs_R10K.pic         Rb_2021_xsecs_R10K.pic
+ co2_xsecs_R10K.pic             K_2021_NewTP_xsecs_R10K.pic    Na_xsecs_R10K.pic              Rb_xsecs_R10K.pic
+ co_xsecs_R10K.pic              K_2021_xsecs_R10K.pic          nh3_xsecs_R10K.pic             Rox_new_xsecs.tar
+ crh_xsecs_R10K.pic             K_Mike_xsecs_R10K.pic          ph3_xsecs_R10K.pic             tio_xsecs_R10K.pic
+ Cs_2021_NewTP_xsecs_R10K.pic   K_xsecs_R10K.pic               PY3_crh_xsecs_R10K.pic         vo_xsecs_R10K.pic
+ Cs_2021_xsecs_R10K.pic         Li_2021_NewTP_xsecs_R10K.pic   PY3_linepickles
+ Cs_xsecs_R10K.pic              Li_2021_xsecs_R10K.pic        'PY3_linepickles 2'
+ feh.tar.gz                     Li_xsecs_R10K.pic              PY3_linepickles.tar
+(retrievals) [912032971@n1 Linelists]$ cd ../
+(retrievals) [912032971@n1 ~]$ cd Brewster_Ydwarfs/
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ mkdir Results/G570D_test/
+mkdir: cannot create directory ‘Results/G570D_test/’: No such file or directory
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ mkdir Results
+(retrievals) [912032971@n1 Brewster_Ydwarfs]$ cd Results/
+(retrievals) [912032971@n1 Results]$ mkdir G570D
+(retrievals) [912032971@n1 Results]$ ls
+G570D
+(retrievals) [912032971@n1 Results]$ echo $SHELL
+/bin/bash
+(retrievals) [912032971@n1 Results]$ sinfo
+PARTITION   AVAIL  TIMELIMIT  NODES  STATE NODELIST
+cpucluster*    up   12:00:00      2   idle lmn[01-02]
+cputest        up    1:00:00      1   idle hmn01
+gpucluster     up    4:00:00      1   idle gpu01
+(retrievals) [912032971@n1 Results]$
