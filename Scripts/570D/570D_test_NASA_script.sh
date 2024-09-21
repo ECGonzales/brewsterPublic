@@ -1,5 +1,6 @@
+#!/bin/bash
 #PBS -S /bin/bash
-#PBS -N TESTING123
+#PBS -N 570D_test
 #PBS -m abe
 #PBS -l select=10:ncpus=24:mpiprocs=24:model=has
 #PBS -l walltime=0:30:00
@@ -8,22 +9,29 @@
 #PBS -q devel
 #PBS -W group_list=s2429
 #PBS -M egonzales@sfsu.edu
-#source /usr/share/modules/init/csh
+
+source /usr/share/modules/init/csh
 module purge
-module load python3
 module load mpi-hpe/mpt
-module comp-intel/2018.3.222
-#source /usr/local/lib/global.cshrc
-source activate python376
+module load comp-intel/2020.4.304
+
 
 setenv MPI_REQUEST_MAX 512
 setenv MPI_SHEPHERD true
 setenv MPI_BUFS_PER_PROC 512
 
 setenv WDIR /home5/egonza65/retrievals/JWST_ross458c
+setenv PYTHONPATH ${WDIR}
+#setenv PATH ${PATH}:${WDIR}
+setenv LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:${WDIR}"
 
-setenv PATH ${PATH}:${WDIR}:/u/scicon/tools/bin
-setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${WDIR}
+source /swbuild/analytix/tools/miniconda3_220407/etc/profile.d/conda.csh
+conda activate brewster376
+
+
+# Debug output to check paths
+echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
+echo "PYTHONPATH: $PYTHONPATH"
 
 #setenv OMP_NUM_THREADS 20
 
