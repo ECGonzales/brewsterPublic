@@ -1,7 +1,7 @@
 import code_test as ct
 import numpy as np
 
-xpath = '/Volumes/DudleyDisk/LineLists/'
+xpath = '../Brewster_shared/Linelists/'
 xlist = 'gaslistR10K.dat'
 results = [ct.NoCloud_Tdwarf(xpath,xlist),ct.MieClouds_Ldwarf(xpath,xlist)]
 
