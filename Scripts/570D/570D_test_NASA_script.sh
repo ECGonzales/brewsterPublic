@@ -1,5 +1,5 @@
-#!/bin/bash
-#PBS -S /bin/bash
+#!/bin/csh
+#PBS -S /bin/csh
 #PBS -N 570D_test
 #PBS -m abe
 #PBS -l select=10:ncpus=24:mpiprocs=24:model=has
@@ -10,11 +10,10 @@
 #PBS -W group_list=s2429
 #PBS -M egonzales@sfsu.edu
 
-source /usr/share/modules/init/csh
+source /usr/share/Modules/init/csh
 module purge
-module load mpi-hpe/mpt
+module load mpi-hpe/mpt.2.28_25Apr23_rhel87
 module load comp-intel/2020.4.304
-
 
 setenv MPI_REQUEST_MAX 512
 setenv MPI_SHEPHERD true
