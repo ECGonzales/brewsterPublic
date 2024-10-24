@@ -382,6 +382,7 @@ def MieClouds_Ldwarf(xpath,xlist):
           return True
      else:
           print("greater than 1 percent difference with L dwarf regime benchmark")
+          print("precent change=", percent_change)
           print('-------------------------------------------------------')
 
           return False
