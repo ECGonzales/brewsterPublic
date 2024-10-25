@@ -6,7 +6,7 @@ import numpy as np
 # Code to convert data from Janskys to u.erg/u.s/u.cm**2/u.AA to then have Brewster G935H convert to to(u.W/u.m**2/u.um)
 
 #Read in the data
-path_to_spectra= '/Users/eileengonzales/Box/Research/JWST_ross458c/Spectra/'
+path_to_spectra= '/Users/eileengonzales/Box/Research/Arcana_Subdwarfs/Spectra/'
 df= pd.read_csv(path_to_spectra+"Wolf1130C.txt",sep="\s+", comment="#", names=['w','f','e'])
 
 #convert Janskys to Ergs/s/cm^2/um. Need to add a factor of 1/lambda^2 to account for nu to lambda.
