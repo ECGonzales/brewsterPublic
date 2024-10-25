@@ -6,7 +6,7 @@ import os
 from rotBroadInt import rot_int_cmj as rotBroad
 
 
-def get_endchain(runname,fin,results_path='./'):
+def get_endchain(runname,fin,results_path='./', emcee_version='other'):
     if (fin == 1):
         pic = results_path+runname+".pk1"
         sampler = pickle_load(pic)
@@ -17,8 +17,10 @@ def get_endchain(runname,fin,results_path='./'):
         max_like = flatprobs[np.argmax(flatprobs)]
         print("maximum likelihood = ", max_like)
         flatendchain = sampler.chain[:,niter-2000:,:].reshape((-1,ndim))
-        if (emcee.__version__ == '3.0rc2'):
+        if (emcee_version == '3.0rc2'):
             flatendprobs = sampler.lnprobability[niter-2000:,:].reshape((-1))
+        elif (emcee_version == 'other'):
+            flatendprobs = sampler.lnprobability[:, niter - 2000:].reshape((-1))
         else:
             flatendprobs = sampler.lnprobability[:, niter-2000:].reshape((-1))
         theta_max_end = flatendchain[np.argmax(flatendprobs)]
@@ -39,8 +41,10 @@ def get_endchain(runname,fin,results_path='./'):
         print("Unfinished symphony. Number of successful iterations = ", niter)
         print("maximum likelihood = ", max_like)
         flatendchain = chain[:,(niter-2000):niter,:].reshape((-1,ndim))
-        if (emcee.__version__ == '3.0rc2'):
+        if (emcee_version == '3.0rc2'):
             flatendprobs = probs[niter-2000:,:].reshape((-1))
+        elif (emcee_version== 'other'):
+            flatendprobs = probs[:, niter-2000:].reshape((-1))
         else:
             flatendprobs = probs[:, niter-2000:].reshape((-1))
         theta_max_end = flatendchain[np.argmax(flatendprobs)]
