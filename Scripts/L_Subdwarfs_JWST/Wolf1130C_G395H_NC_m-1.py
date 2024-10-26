@@ -57,7 +57,7 @@ obspec[2] = obspec[2] * 10.
 # Now the wavelength range
 # ALLOW for a bit extra beyond data at each end to allow for Vrad
 w1 = 2.85
-w2 = 5.2
+w2 = 5.25
 
 # FWHM of data in microns(WE DON'T USE THIS FOR SPEX DATA.
 #  >0 = some value of FWHM for convolving the data

@@ -1,6 +1,61 @@
 #!/bin/csh
 #PBS -S /bin/csh
-#PBS -N Wolf1130C_NC
+#PBS -N Wolf1130C_NC_fix
+#PBS -m abe
+#PBS -l nodes=3:ppn=96
+#PBS -l walltime=00:30:00
+#PBS -k oe
+#PBS -q core96
+#PBS -M egonzales@sfsu.edu
+
+source ~/.tcshrc
+module unload mpi/openmpi-x86_64
+module unload intel-mpi
+module load openmpi-4.0.5
+
+setenv WDIR /home/egonzales/brewster/Arcana_Subdwarfs
+
+setenv PATH ${PATH}:${WDIR}
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${WDIR}:~/
+
+conda activate retrievals_py3
+
+unlimit stacksize
+
+limit coredumpsize 0
+
+set time_start=`date '+%T%t%d_%h_06'`
+
+echo ------------------------------------------------------
+echo -n 'Job is running on node '; cat $PBS_NODEFILE
+echo ------------------------------------------------------
+echo PBS: qsub is running on $PBS_O_HOST
+echo PBS: originating queue is $PBS_O_QUEUE
+echo PBS: executing queue is $PBS_QUEUE
+echo PBS: working directory is $PBS_O_WORKDIR
+echo PBS: execution mode is $PBS_ENVIRONMENT
+echo PBS: job identifier is $PBS_JOBID
+echo PBS: job name is $PBS_JOBNAME
+echo PBS: node file is $PBS_NODEFILE
+echo PBS: current home directory is $PBS_O_HOME
+echo PBS: PATH = $PBS_O_PATH
+echo ------------------------------------------------------
+
+
+
+cd ${WDIR}
+
+
+mpiexec -np 480 python Wolf1130C_G395H_NC_vrad_fix.py > /beegfs/car/egonzales/Results/LSubdwarfs_JWST/Wolf1130C_NC_fix.log
+
+set time_end=`date '+%T%t%d_%h_06'`
+echo Started at: $time_start
+echo Ended at: $time_end
+echo ------------------------------------------------------
+echo Job ends
+#!/bin/csh
+#PBS -S /bin/csh
+#PBS -N Wolf1130C_NC_fix
 #PBS -m abe
 #PBS -l select=20:ncpus=24:mpiprocs=24:model=has
 #PBS -l walltime=75:00:00
@@ -60,7 +115,9 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 480 python Wolf1130C_G395H_NC.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC.log
+mpirun -env I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=1 \
+       -machinefile $PBS_NODEFILE -n 288 -ppn 96 \
+       python Wolf1130C_G395H_NC_vrad_fix.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_fix.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start

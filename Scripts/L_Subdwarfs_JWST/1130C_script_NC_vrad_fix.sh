@@ -1,13 +1,12 @@
 #!/bin/csh
 #PBS -S /bin/csh
-#PBS -N Wolf1130C_NC_m-0.5
+#PBS -N Wolf1130C_NC_fix
 #PBS -m abe
-#PBS -l select=10:ncpus=24:mpiprocs=24:model=has
-#PBS -l walltime=00:30:00
-#PBS -l site=needed=/nobackupp27+/home5
+#PBS -l select=20:ncpus=24:mpiprocs=24:model=has
+#PBS -l walltime=75:00:00
 #PBS -k oe
 #PBS -r n
-#PBS -q devel
+#PBS -q long
 #PBS -W group_list=s2429
 #PBS -M egonzales@sfsu.edu
 
@@ -40,7 +39,7 @@ unlimit stacksize
 limit coredumpsize 0
 
 set time_start=`date '+%T%t%d_%h_06'`
-  
+
 echo ------------------------------------------------------
 echo -n 'Job is running on node '; cat $PBS_NODEFILE
 echo ------------------------------------------------------
@@ -61,11 +60,13 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 240 python Wolf1130C_G395H_NC_m-0.5.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_m-0.5.log
+mpiexec -np 480 python Wolf1130C_G395H_NC_vrad_fix.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_fix.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start
 echo Ended at: $time_end
 echo ------------------------------------------------------
 echo Job ends
+
+
 
