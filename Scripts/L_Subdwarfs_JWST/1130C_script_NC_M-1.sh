@@ -2,7 +2,7 @@
 #PBS -S /bin/csh
 #PBS -N Wolf1130C_NC_m-1
 #PBS -m abe
-#PBS -l select=20:ncpus=24:mpiprocs=24:model=has
+#PBS -l select=10:ncpus=24:mpiprocs=24:model=has
 #PBS -l walltime=00:30:00
 #PBS -k oe
 #PBS -r n
@@ -60,7 +60,7 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 480 python Wolf1130C_G395H_NC_m-1.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_m-1.log
+mpiexec -np 240 python Wolf1130C_G395H_NC_m-1.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_m-1.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start

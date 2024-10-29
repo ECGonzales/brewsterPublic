@@ -2,7 +2,7 @@
 #PBS -S /bin/csh
 #PBS -N Wolf1130C_NC_m-0.5
 #PBS -m abe
-#PBS -l select=10:ncpus=24:mpiprocs=24:model=has
+#PBS -l select=20:ncpus=24:mpiprocs=24:model=has
 #PBS -l walltime=00:30:00
 #PBS -l site=needed=/nobackupp27+/home5
 #PBS -k oe
@@ -15,6 +15,8 @@ source /usr/share/Modules/init/csh
 module purge
 module load mpi-hpe/mpt.2.28_25Apr23_rhel87
 module load comp-intel/2020.4.304
+
+export MPI_LAUNCH_TIMEOUT=500
 
 setenv MPI_REQUEST_MAX 512
 setenv MPI_SHEPHERD true
@@ -61,7 +63,7 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 240 python Wolf1130C_G395H_NC_m-0.5.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_m-0.5.log
+mpiexec -np 480 python Wolf1130C_G395H_NC_m-0.5.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_m-0.5.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start

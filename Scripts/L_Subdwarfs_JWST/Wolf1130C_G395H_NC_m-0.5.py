@@ -166,12 +166,12 @@ nburn = 10000
 niter = 30000
 
 # Is this a test or restart?
-runtest = 0
+runtest = 1
 
 # Are we writing the arguments to a pickle?
 # Set= 0 for no and run,Set = 1 for write and exit (no run); = 2 for write and continue
 # option 2 may cause a memory issue and crash a production run
-make_arg_pickle = 0
+make_arg_pickle = 2
 
 # Where is the output going?
 outdir = "/nobackupp27/egonza65/Results/LSubdwarfs_JWST/"
