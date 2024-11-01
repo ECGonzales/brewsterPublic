@@ -166,7 +166,7 @@ nburn = 10000
 niter = 30000
 
 # Is this a test or restart?
-runtest = 0
+runtest = 1
 
 # Are we writing the arguments to a pickle?
 # Set= 0 for no and run,Set = 1 for write and exit (no run); = 2 for write and continue
@@ -205,7 +205,7 @@ r2d2 = (71492e3)**2. / (dist * 3.086e+16)**2.
 
 # If we want fresh guess set to 0, total inherit the previous set 1
 # inherit plus randomise the VMRs. 2. See below to enter this filename
-fresh = 0
+fresh = 1
 p0 = np.empty([nwalkers,ndim])
 if (fresh == 0):
     # ----- "Gas" parameters (Includes gases, gravity, logg, scale factor, vrad, (vsini) , and tolerance parameter) --
@@ -277,6 +277,7 @@ ciatemps = np.asfortranarray(ciatemps, dtype='float32')
 
 # grab BFF and Chemical grids
 bff_raw,ceTgrid,metscale,coscale,gases_myP = testkit.sort_bff_and_CE(chemeq,"chem_eq_tables_P3K.pic",press,gaslist)
+# bff_raw,ceTgrid,metscale,coscale,gases_myP = testkit.sort_bff_and_CE(chemeq,"chem_eq_tables_grid_500_6000_P3K.pic",press,gaslist)
 
 
 settings.init()
