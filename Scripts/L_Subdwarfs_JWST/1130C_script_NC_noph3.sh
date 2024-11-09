@@ -3,10 +3,10 @@
 #PBS -N Wolf1130C_NC_noph3
 #PBS -m abe
 #PBS -l select=10:ncpus=24:mpiprocs=24:model=has
-#PBS -l walltime=00:30:00
+#PBS -l walltime=45:00:00
 #PBS -k oe
 #PBS -r n
-#PBS -q devel
+#PBS -q long
 #PBS -W group_list=s2429
 #PBS -M egonzales@sfsu.edu
 
