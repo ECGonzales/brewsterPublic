@@ -24,9 +24,10 @@ from bensconv import prism_non_uniform
 from bensconv import conv_uniform_R
 from bensconv import conv_uniform_FWHM
 from matplotlib.lines import Line2D
+import pandas as pd
+from matplotlib.ticker import ScalarFormatter
 
-
-#------------------------------- Load up the data and get the profile------------------
+# ------------------------------- Load up the data and get the profile------------------
 path_to_results='Results/Wolf1130C/'
 figure_path='Figures/Wolf1130C/'
 runname = "Wolf1130C_NC"
@@ -74,7 +75,7 @@ bestT = TPmod.set_prof(1,coarsePress,press,theta_max_end[ndim-13:])
 # ---------------------------------------------------------------------------------------------------------------------
 # -------------------------------- Create The PT profile ------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------------------
-#Load up some forward models for comparisons
+# Load up some forward models for comparisons
 sonoramodels = '/Users/eileengonzales/Dropbox/BDNYC/BDNYC_Research/Models/Marley2018_Sonoramodels/cmp/'
 bobcatmodels = '/Users/eileengonzales/Dropbox/BDNYC/BDNYC_Research/Models/Sonora_Bobcat/SonoraBobcat_M-0.5_profiles/'
 elfowlmodels = '/Users/eileengonzales/Dropbox/BDNYC/BDNYC_Research/Models/Sonora_Elf_Owl/T_dwarfs_575-1200/' #Need to download these
@@ -129,14 +130,14 @@ c4, = plt.plot(kcl,logP,'--',color='purple',linewidth=1.5, label='KCl')
 c5, = plt.plot(warm_ADP,logP,'--',color='#26940D',linewidth=1.5, label='NH$_4$H$_2$PO$_4$')
 c6, = plt.plot(h2o,logP,'--',color='blue',linewidth=1.5, label='H$_2$O')
 
-#For soloar M/H
+# For solar M/H
 # plt.text(1240, -1, 'MnS', rotation=-60,fontsize=14, color='#DBB93B')
 # plt.text(900, -1, 'Na$_2$S', rotation=-60,fontsize=14, color='#CE96FF') ##CE96FF, #CE008F
 # plt.text(750, -1, 'ZnS', rotation=-75,fontsize=14, color='orange')
 # plt.text(670, -1.2, 'KCl', rotation=-65,fontsize=14, color='purple')
 # plt.text(230, -0.75, 'H$_2$O', rotation=-80,fontsize=14, color='blue')
 
-#For M/H=-0.68
+# For M/H=-0.68
 plt.text(1155, -1, 'MnS', rotation=-60,fontsize=14, color='#DBB93B')
 plt.text(840, -1, 'Na$_2$S', rotation=-60,fontsize=14, color='#CE96FF') ##CE96FF, #CE008F
 plt.text(695, -1.2, 'ZnS', rotation=-75,fontsize=14, color='orange')
@@ -144,9 +145,7 @@ plt.text(745, 0, 'KCl', rotation=-65,fontsize=14, color='purple')
 plt.text(410, -0.75, 'NH$_4$H$_2$PO$_4$', rotation=-80,fontsize=14, color='#26940D')
 plt.text(215, -0.75, 'H$_2$O', rotation=-80,fontsize=14, color='blue')
 
-
-
-#Add Legend and axes labels
+# Add Legend and axes labels
 plt.legend(handles=[d1,m2, m3],fontsize=14)
 # plt.legend(handles=[d1,l1,m1,m2,c1,c2,c3,c4,c6],fontsize=12, loc=1)
 plt.ylabel(r'log(P) (bar)', fontsize=20)
@@ -310,6 +309,103 @@ plt.ylabel('log$\,$P  (bars)',fontsize=15)
 plt.xlabel('log$\,f_{gas}$',fontsize=15)
 plt.savefig(figure_path + runname + '_Pub_abundances.pdf', format='pdf', dpi=320, bbox_inches='tight')
 
+# ---------------------------------------------------------------------------------------------------------------------
+# -------------------------------- Contribution function ------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------
+# get diagnostics along with the spectrum
+gnostics = 1
+shiftspec, clphotspec, ophotspec, cfunc = testkit.modelspec(theta_max_end, runargs, gnostics)
+
+df_samples=pd.DataFrame(samples.T)
+df_samples['medians']=df_samples.median(1) # take the median of each row and create a new column.
+
+# Get the values for the medians from testkit for the cloud and gas
+shiftspec, clphotspec, ophotspec, cfunc = testkit.modelspec(df_samples['medians'],runargs,gnostics)
+
+nwave = inwavenum.size
+cfunc = np.reshape(cfunc, [cfunc.shape[1], cfunc.shape[2]])
+fwhm = 4 / 3000
+wlen = shiftspec.shape[1]
+wint = shiftspec[0, 0] - shiftspec[0, wlen - 1]
+
+df_testkit=pd.DataFrame()
+df_testkit['cl'] = clphotspec[0]
+df_testkit['wave'] = shiftspec[0]
+
+# convolve with instrumental profile
+# start by setting up kernel
+# First step is finding the array index length of the FWHM
+disp = wint / wlen
+gwidth = int((((fwhm / disp) // 2) * 2) + 1)
+# needs to be odd
+# now get the kernel and convolve
+gauss = Gaussian1DKernel(gwidth)
+
+for ilayer in range(0, press.size):
+    cfunc[:, ilayer] = convolve(cfunc[:, ilayer], gauss, boundary='extend')
+
+tau1_cl_Press = convolve(clphotspec[0], gauss, boundary='extend')[::-1]
+tau1_oth_Press = convolve(ophotspec[0], gauss, boundary='extend')[::-1]
+
+wavenew = shiftspec[0, ::-1]
+press = press.reshape(64, )
+normfunc = np.zeros_like(cfunc)
+for iwave in range(0, nwave):
+    totcont = np.sum(cfunc[iwave, :])
+    normfunc[iwave, :] = cfunc[iwave, :] / totcont
+
+# plt.rc('font', family='serif')
+# plt.rc('text', usetex=False)
+# fig=plt.figure(dpi=120)
+
+
+fig, ax = plt.subplots()
+fig.set_size_inches(10, 6.45)
+ax.axis([2.85, 5.2, press[-1], press[0]])
+
+ax.set_yscale('log')
+ax.set_xscale('log')
+# # major_ticks = np.arange(1.0,15.,1.0)
+# # minor_ticks = np.arange(1.0,15.,0.5)
+# # ax.set_xticks(major_ticks)
+# # ax.set_xticks(minor_ticks, minor=True)
+
+
+
+cm = ax.pcolormesh(wavenew, press, (normfunc[::-1, :].transpose()),
+                   cmap='Greys', norm=colors.SymLogNorm(linthresh=0.001, linscale=0.00001,
+                                                        vmin=0., vmax=np.amax(normfunc)))
+
+# t1, = plt.plot(wavenew,(tau1_cl_Press),'m-',label=r'$\tau_{cloud} = 1.0$')
+# t2, = ax.plot(wavenew,(tau1_oth_Press),'c-', label =r'$\tau_{gas} = 1.0$')
+t2, = plt.plot(wavenew,(tau1_oth_Press),'c-', label =r'median $\tau_{gas} = 1.0$')
+
+# fig.legend(handles=[t2])
+# # Format the axes
+ax.xaxis.set_major_formatter(ScalarFormatter())
+ax.xaxis.set_minor_formatter(ScalarFormatter())
+ax.xaxis.set_major_locator(plt.FixedLocator([3,4, 5]))
+ax.xaxis.set_minor_locator(plt.FixedLocator([2.85,3.5,4.5,5.2]))
+#ax.xaxis.set_major_locator(plt.FixedLocator([1, 1.25,1.5,1.75,2,2.25, 2.5]))
+ax.tick_params(axis='both', which='major', labelsize=15, length=8, width=1.1)
+ax.tick_params(axis='both', which='minor', labelsize=15, length=4, width=1.1)
+
+# create legend
+plt.legend(handles=[t2], fontsize=15)
+
+#Color bar and axes
+cbar = fig.colorbar(cm, ax=ax, orientation='vertical', norm=colors.Normalize(clip=False), ticks=[1e-3, 1e-2, 0.1])
+cbar.ax.set_yticklabels(['<0.1%', '1%', '10%'], fontsize=15)
+cbar.set_label('% of total', rotation=270, fontsize=20)
+plt.ylabel('Pressure (bar)', fontsize=20)
+plt.xlabel('Wavelength ($\mu m$)', fontsize=20)
+plt.tight_layout()
+# plt.savefig(figure_path + runname + '_Pub_median_contribution.pdf', format='pdf', dpi=320)
+plt.savefig(figure_path + runname + '_Pub_median_contribution_lowdpi.pdf', format='pdf', dpi=125)
+
+# ---------------------------------------------------------------------------------------------------------------------
+# -------------------------------- Corner Plot W/O vsini ------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------
 #Post process corner plot
 samples = brewtools.pickle_load(path_to_results+runname_post+'_postprod.pk1')
 # You'll need to edit this cell to make it work for the gases you've used

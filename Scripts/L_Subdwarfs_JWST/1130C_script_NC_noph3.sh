@@ -60,7 +60,7 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 480 python Wolf1130C_G395H_NC_noph3.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_noph3.log
+mpiexec -np 240 python Wolf1130C_G395H_NC_noph3.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_noph3.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start

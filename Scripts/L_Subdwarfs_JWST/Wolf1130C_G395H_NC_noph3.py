@@ -171,7 +171,7 @@ runtest = 1
 # Are we writing the arguments to a pickle?
 # Set= 0 for no and run,Set = 1 for write and exit (no run); = 2 for write and continue
 # option 2 may cause a memory issue and crash a production run
-make_arg_pickle = 0
+make_arg_pickle = 2
 
 # Where is the output going?
 outdir = "/nobackupp27/egonza65/Results/LSubdwarfs_JWST/"
@@ -205,7 +205,7 @@ r2d2 = (71492e3)**2. / (dist * 3.086e+16)**2.
 
 # If we want fresh guess set to 0, total inherit the previous set 1
 # inherit plus randomise the VMRs. 2. See below to enter this filename
-fresh = 1
+fresh = 0
 p0 = np.empty([nwalkers,ndim])
 if (fresh == 0):
     # ----- "Gas" parameters (Includes gases, gravity, logg, scale factor, vrad, (vsini) , and tolerance parameter) --
