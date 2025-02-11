@@ -1,9 +1,9 @@
 #!/bin/csh
 #PBS -S /bin/csh
-#PBS -N Wolf1130C_NC_no_nh3
+#PBS -N Wolf1130C_NC
 #PBS -m abe
 #PBS -l select=20:ncpus=24:mpiprocs=24:model=has
-#PBS -l walltime=60:00:00
+#PBS -l walltime=60:30:00
 #PBS -k oe
 #PBS -r n
 #PBS -q long
@@ -60,7 +60,7 @@ echo ------------------------------------------------------
 cd ${WDIR}
 
 
-mpiexec -np 480 python Wolf1130C_G395H_NC_no_nh3.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_no_nh3.log
+mpiexec -np 480 python Wolf1130C_G395H_NC_no_h2s.py > /nobackupp27/egonza65/Results/LSubdwarfs_JWST/Wolf1130C_NC_no_h2s.log
 
 set time_end=`date '+%T%t%d_%h_06'`
 echo Started at: $time_start

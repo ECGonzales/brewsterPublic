@@ -46,7 +46,7 @@ __status__ = "Development"
 # First get data and parameters for object
 
 # Give the run name
-runname = "Wolf1130C_NC_no_nh3"
+runname = "Wolf1130C_NC_no_h2s"
 
 # get the observed spectrum
 obspec = np.asfortranarray(np.loadtxt("Spectra/converted_units_Wolf1130C.txt",dtype='d',unpack=True))
@@ -142,7 +142,7 @@ xlist = 'gaslistR30K.dat' #The gaslistR10k better. Rox is sampled at 10k (rather
 # together at Asplund solar ratio. See Line at al (2015)
 # Else if K is after Na, they'll be separate
 
-gaslist = ['h2o','ch4','co','co2','h2s','ph3']
+gaslist = ['h2o','ch4','co','co2','nh3','ph3']
 
 ngas = len(gaslist)
 
@@ -214,8 +214,8 @@ if (fresh == 0):
     p0[:,1] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # Ch4
     p0[:,2] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # CO    
     p0[:,3] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # CO2
-    # p0[:,4] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # NH3
-    p0[:,4] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 #H2S
+    p0[:,4] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # NH3
+    # p0[:,5] = (0.5*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 #H2S
     p0[:,5] = (1.0*np.random.randn(nwalkers).reshape(nwalkers)) - 4.0 # PH3
     p0[:,6] = 0.1*np.random.randn(nwalkers).reshape(nwalkers) + 4.8  # gravity
     p0[:,7] = r2d2 + (np.random.randn(nwalkers).reshape(nwalkers) * (0.1*r2d2))
