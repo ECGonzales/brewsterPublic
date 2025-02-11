@@ -10,7 +10,7 @@ import scipy as sp
 import testkit
 import ciamod
 import TPmod
-import nugbits_Wolf1130C as nb
+import nugbits_Wolf1130C_small as nb
 import settings
 import os
 import gc
@@ -70,11 +70,13 @@ sigDist = 0.007
 sigPhot = 0.02
 
 # Where are the pickles stored?
-outdir = "/nobackupp27/egonza65/Results/LSubdwarfs_JWST/"
+# outdir = "/nobackupp27/egonza65/Results/LSubdwarfs_JWST/"
+outdir = "/beegfs/car/egonzales/Results/Arcana/"
 
 # Where are the cross sections?
 # give the full path
-xpath = "/nobackupp27/egonza65/Linelists/R30K/"
+# xpath = "/nobackupp27/egonza65/Linelists/R30K/"
+xpath = "/beegfs/car/bb/Linelists/"
 
 # which opacity set did we use?
 xlist = "gaslistR30K.dat"

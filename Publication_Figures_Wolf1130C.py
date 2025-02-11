@@ -196,22 +196,22 @@ for i in range(0, 6):
     xr = np.where(np.logical_and(obspec[0, :] > (2.8 + (i * 0.4)), obspec[0, :] < 3.2 + (i * 0.4)))
     xr = xr[0]
 
-    d1, = axs[i].plot(obspec[0, xr], obspec[1, xr] / 1e-17, 'k-', label=runname + " data")
+    d1, = axs[i].plot(obspec[0, xr], obspec[1, xr] / 1e-17, 'k-', label="Wolf 1130C data")
     axs[i].fill_between(obspec[0, xr], (obspec[1, xr] - obspec[2, xr]) / 1e-17, (obspec[1, xr] + obspec[2, xr]) / 1e-17,
                         facecolor='gray', alpha=0.5)
     r1, = axs[i].plot(obspec[0, xr], specdist[xr, 2] / 1e-17, 'y-', linewidth=0.8, label="median", zorder=5)
     plt.fill_between(obspec[0], specdist[:, 0], specdist[:, 4], facecolor='red', alpha=0.2)
     axs[i].fill_between(obspec[0, xr], specdist[xr, 1] / 1e-17, specdist[xr, 3] / 1e-17, facecolor='red', alpha=0.5)
 
-    t1, = axs[i].plot(obspec[0, xr], topspec[xr] / 1e-17, 'g-', linewidth=0.5, label="max likelihood", zorder=4)
+    # t1, = axs[i].plot(obspec[0, xr], topspec[xr] / 1e-17, 'g-', linewidth=0.5, label="max likelihood", zorder=4)
 
     if i == 0:
         #         axs[i].legend(handles=[d1,r1,t1],bbox_to_anchor=(1.05,1.2),loc='upper left')
-        axs[i].legend(handles=[d1, r1, t1], bbox_to_anchor=(0.5, 1.5), loc='center', ncol=3, borderaxespad=0.2,
+        axs[i].legend(handles=[d1, r1], bbox_to_anchor=(0.5, 1.5), loc='center', ncol=3, borderaxespad=0.2,
                       fontsize=9)
 
 
-plt.ylabel(r'                                          $ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=15)
+plt.ylabel(r'                                            $ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=15)
 plt.xlabel('Wavelength ($\mu m$)', fontsize=15)
 plt.savefig(figure_path + runname +"_Pub_SPAG_SPEC.pdf", format='pdf', dpi=320)
 
@@ -385,7 +385,7 @@ t2, = plt.plot(wavenew,(tau1_oth_Press),'c-', label =r'median $\tau_{gas} = 1.0$
 ax.xaxis.set_major_formatter(ScalarFormatter())
 ax.xaxis.set_minor_formatter(ScalarFormatter())
 ax.xaxis.set_major_locator(plt.FixedLocator([3,4, 5]))
-ax.xaxis.set_minor_locator(plt.FixedLocator([2.85,3.5,4.5,5.2]))
+# ax.xaxis.set_minor_locator(plt.FixedLocator([2.85,3.5,4.5,5.2]))
 #ax.xaxis.set_major_locator(plt.FixedLocator([1, 1.25,1.5,1.75,2,2.25, 2.5]))
 ax.tick_params(axis='both', which='major', labelsize=15, length=8, width=1.1)
 ax.tick_params(axis='both', which='minor', labelsize=15, length=4, width=1.1)
