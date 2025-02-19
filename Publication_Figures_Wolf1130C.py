@@ -138,7 +138,7 @@ c6, = plt.plot(h2o,logP,'--',color='blue',linewidth=1.5, label='H$_2$O')
 # plt.text(230, -0.75, 'H$_2$O', rotation=-80,fontsize=14, color='blue')
 
 # For M/H=-0.68
-plt.text(1155, -1, 'MnS', rotation=-60,fontsize=14, color='#DBB93B')
+plt.text(1155, -1, 'MnS', rotation=-60,fontsize=14, color='#DBB93B') ##DBB93B
 plt.text(840, -1, 'Na$_2$S', rotation=-60,fontsize=14, color='#CE96FF') ##CE96FF, #CE008F
 plt.text(695, -1.2, 'ZnS', rotation=-75,fontsize=14, color='orange')
 plt.text(745, 0, 'KCl', rotation=-65,fontsize=14, color='purple')
@@ -260,9 +260,10 @@ vmr = gasVMR
 
 fig6=plt.figure(dpi=320)
 # ax = fig.add_subplot(1,1,1)
-plt.axis([-12, -2, 3.0, -4.0])
+plt.axis([-12, -2, 2.4, -4.0])
 
-colors=['#00BFBF','#87405C','#FF5186', 'orange', '#EE7F9C', 'blue','#678D56']
+# colors=['#00BFBF','#87405C','#FF5186', 'orange', '#EE7F9C', 'blue','#678D56']
+colors=['tab:blue','tab:orange','hotpink', 'tab:red', 'tab:brown', 'c','tab:green']
 # gas_names_list =['h2o', 'ch4', 'co', 'co2', 'nh3', 'h2s', 'ph3']
 gas_names_list =['H$_{2}$O', 'CH$_{4}$', 'CO', 'CO$_{2}$',
                  'NH$_{3}$', 'H$_{2}$S', 'PH$_{3}$']
@@ -289,19 +290,19 @@ handles, labels =plt.gca().get_legend_handles_labels()
 
 # Add legend and labels that are shared over all the subplots
 # create lines for custom legend
-custom_lines = [Line2D([0], [0], color='k', ls='-'),
-                Line2D([0], [0], color='k', ls='dashed')]
-legend=plt.legend(custom_lines, ['Retrieved Abundance', '[M/H]=-0.7, C/0=0.26 Model Abundance'], loc='lower left',
-                  bbox_to_anchor= (0, 1.01), ncol=2, borderaxespad=0, fontsize=9)
+# custom_lines = [Line2D([0], [0], color='k', ls='-'),
+#                 Line2D([0], [0], color='k', ls='dashed')]
+# legend=plt.legend(custom_lines, ['Retrieved Abundance', '[M/H]=-0.7, C/0=0.26 Model Abundance'], loc='lower left',
+#                   bbox_to_anchor= (0, 1.01), ncol=2, borderaxespad=0, fontsize=9)
 
 
-plt.annotate('H$_\mathrm{2}$O', xy=(-3, -3.5), color='#00BFBF', fontsize=15)
-plt.annotate('CH$_\mathrm{4}$', xy=(-3, -3), color='#87405C', fontsize=15)
-plt.annotate('CO', xy=(-3, -2.5), color='#FF5186', fontsize=15)
-plt.annotate('CO$_\mathrm{2}$', xy=(-3, -2), color='orange', fontsize=15)
-plt.annotate('NH$_\mathrm{3}$', xy=(-3, -1.5), color='#EE7F9C', fontsize=15)
-plt.annotate('H$_\mathrm{2}$S', xy=(-3, -1), color='blue', fontsize=15)
-plt.annotate('PH$_\mathrm{3}$', xy=(-3, -0.5), color='#678D56', fontsize=15)
+plt.annotate('H$_\mathrm{2}$O', xy=(-3, -3.5), color='tab:blue', fontsize=15)
+plt.annotate('CH$_\mathrm{4}$', xy=(-3, -3), color='tab:orange', fontsize=15)
+plt.annotate('CO', xy=(-3, -2.5), color='hotpink', fontsize=15)
+plt.annotate('CO$_\mathrm{2}$', xy=(-3, -2), color='tab:red', fontsize=15)
+plt.annotate('NH$_\mathrm{3}$', xy=(-3, -1.5), color='tab:brown', fontsize=15)
+plt.annotate('H$_\mathrm{2}$S', xy=(-3, -1), color='c', fontsize=15)
+plt.annotate('PH$_\mathrm{3}$', xy=(-3, -0.5), color='tab:green', fontsize=15)
 
 
 #Add axes Labels
