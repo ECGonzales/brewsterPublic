@@ -176,56 +176,138 @@ axs[5].set(ylim=[0,4.8])
 plt.ylabel(r'                                               $ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=15)
 plt.xlabel('Wavelength ($\mu m$)',fontsize=15)
 #plt.savefig(runname+"_panel_spec.png",format='png', dpi=320)
-plt.savefig(figure_path+"Spectra_without_gases1.png",format='png', dpi=320)
+plt.savefig(figure_path+"Spectra_without_gases_final.pdf",format='pdf', dpi=320)
 
 
 # H2S---
-fig = plt.figure()
-ax1 = fig.add_subplot(111)
-fig.set_size_inches(10, 6.45)
-plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
-plt.axis([3.6, 3.76,0,6.5])
-for axis in ['top', 'bottom', 'left', 'right']:  # Thicken the frame
-    ax1.spines[axis].set_linewidth(1.1)
+fig, axs = plt.subplots(2, gridspec_kw={'height_ratios': [6, 1],'hspace': 0.1}, sharex=True)
+# Top figure-- spectrum
+axs[0].axis([3.6, 3.76,0,6.5])
+d1, = axs[0].plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
+r1, = axs[0].plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=0.5, label="Winning Model")
+r2, = axs[0].plot(noh2s['w'], noh2s['f'] / 1e-17, color='c', linewidth=0.5, label="Without H2s", zorder=4)
+axs[0].fill_between(noh2s['w'], noh2s['err1'] / 1e-17, noh2s['err2'] / 1e-17, facecolor='c', alpha=0.3)
+axs[0].fill_between(winner['w'], winner['err1'] / 1e-17, winner['err2'] / 1e-17, facecolor='y', alpha=0.3)
 
-d1, = plt.plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
-r1, = plt.plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=1, label="Winning Model")
-r2, = plt.plot(noh2s['w'], noh2s['f'] / 1e-17, color='c', linewidth=0.8, label="Without H2s", zorder=4)
+axs[0].annotate('Wolf 1130C', xy=(3.602, 6), color='k', fontsize=15)
+axs[0].annotate('Best Fit Model', xy=(3.602, 5.5), color='y', fontsize=15)
+axs[0].annotate('Model without H$_2$S', xy=(3.602, 5.0), color='c', fontsize=15) #,path_effects=[pe.withStroke(linewidth=0.3, foreground="blue")]
 
-plt.annotate('Data', xy=(3.602, 6), color='k', fontsize=20)
-plt.annotate('Best Fit Model', xy=(3.602, 5.6), color='y', fontsize=20)
-plt.annotate('Model without H$_2$S', xy=(3.602, 5.2), color='c', fontsize=20) #,path_effects=[pe.withStroke(linewidth=0.3, foreground="blue")]
+axs[0].set_ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=15)
 
-plt.ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=20)
-plt.xlabel('Wavelength ($\mu m$)',fontsize=20)
-ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
+# Bottom-Reisduals
+axs[1].axis([3.6, 3.76,-0.5,0.5])
+r3, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(winner['f'] / 1e-17), color='y', linewidth=1, label="Without H2s", zorder=1)
+r4, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(noh2s['f'] / 1e-17), color='c', linewidth=1, label="Without H2s", zorder=2)
+# axs[1].fill_between(data['w'], (data['f'] / 1e-17)-(noh2s['err1'] / 1e-17), (data['f'] / 1e-17)-(noh2s['err2'] / 1e-17), facecolor='black', alpha=0.3)
+
+axs[1].set_ylabel('$\Delta$', fontsize=15)
+axs[1].set_xlabel('Wavelength ($\mu m$)',fontsize=15)
+# ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
 plt.tight_layout()
-plt.savefig(figure_path+"Spectra_without_H2S_single.png",format='png', dpi=320)
+plt.savefig(figure_path+"Spectra_without_H2S_single.pdf",format='pdf', dpi=320)
+
+
+# fig = plt.figure()
+# ax1 = fig.add_subplot(211)
+# fig.set_size_inches(10, 6.45)
+# plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
+# plt.axis([3.6, 3.76,0,6.5])
+# for axis in ['top', 'bottom', 'left', 'right']:  # Thicken the frame
+#     ax1.spines[axis].set_linewidth(1.1)
+#
+#
+# d1, = plt.plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
+# r1, = plt.plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=1, label="Winning Model")
+# r2, = plt.plot(noh2s['w'], noh2s['f'] / 1e-17, color='c', linewidth=0.8, label="Without H2s", zorder=4)
+#
+# plt.annotate('Data', xy=(3.602, 6), color='k', fontsize=20)
+# plt.annotate('Best Fit Model', xy=(3.602, 5.6), color='y', fontsize=20)
+# plt.annotate('Model without H$_2$S', xy=(3.602, 5.2), color='c', fontsize=20) #,path_effects=[pe.withStroke(linewidth=0.3, foreground="blue")]
+#
+# plt.ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=20)
+# plt.xlabel('Wavelength ($\mu m$)',fontsize=20)
+# ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
+# plt.tight_layout()
+# plt.savefig(figure_path+"Spectra_without_H2S_single.png",format='png', dpi=320)
 
 # PH3---
-fig = plt.figure()
-ax1 = fig.add_subplot(111)
-fig.set_size_inches(10, 6.45)
-plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
-plt.axis([4, 4.5,2,8])
-for axis in ['top', 'bottom', 'left', 'right']:  # Thicken the frame
-    ax1.spines[axis].set_linewidth(1.1)
 
-d1, = plt.plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
-r1, = plt.plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=1, label="Winning Model")
-r2, = plt.plot(noph3['w'], noph3['f'] / 1e-17, color='tab:green', linewidth=0.8, label="Without Ph3", zorder=4)
+fig, axs = plt.subplots(2, gridspec_kw={'height_ratios': [6, 1],'hspace': 0.1}, sharex=True)
+# Top figure-- spectrum
+axs[0].axis([4.1, 4.54,1.5,7.3])
+d1, = axs[0].plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
+r1, = axs[0].plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=0.5, label="Winning Model")
+r2, = axs[0].plot(noph3['w'], noph3['f'] / 1e-17, color='tab:green', linewidth=0.5, label="Without PH$_3$s", zorder=4)
+axs[0].fill_between(noph3['w'], noph3['err1'] / 1e-17, noph3['err2'] / 1e-17, facecolor='tab:green', alpha=0.3)
+axs[0].fill_between(winner['w'], winner['err1'] / 1e-17, winner['err2'] / 1e-17, facecolor='y', alpha=0.3)
 
-plt.annotate('Data', xy=(4.34, 7.6), color='k', fontsize=20)
-plt.annotate('Best Fit Model', xy=(4.34, 7.3), color='y', fontsize=20)
-plt.annotate('Model without PH$_3$', xy=(4.34, 7.0), color='tab:green', fontsize=20)
+axs[0].annotate('Wolf 1130C', xy=(4.34, 6.9), color='k', fontsize=15)
+axs[0].annotate('Best Fit Model', xy=(4.34, 6.5), color='y', fontsize=15)
+axs[0].annotate('Model without PH$_3$', xy=(4.34, 6.0), color='tab:green', fontsize=15)
 
-plt.ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=20)
-plt.xlabel('Wavelength ($\mu m$)',fontsize=20)
-ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
+axs[0].set_ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=15)
+
+# Bottom-Reisduals
+axs[1].axis([4.1, 4.54,-2.2,1.5])
+r3, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(winner['f'] / 1e-17), color='y', linewidth=1, label="Without H2s", zorder=2)
+r4, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(noph3['f'] / 1e-17), color='tab:green', linewidth=1, label="Without H2s", zorder=1)
+axs[1].fill_between(data['w'], (data['f'] / 1e-17)-(noph3['err1'] / 1e-17), (data['f'] / 1e-17)-(noph3['err2'] / 1e-17), facecolor='tab:green', alpha=0.3)
+
+axs[1].set_ylabel('$\Delta$', fontsize=15)
+axs[1].set_xlabel('Wavelength ($\mu m$)',fontsize=15)
+# ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
 plt.tight_layout()
-plt.savefig(figure_path+"Spectra_without_Ph3_single.png",format='png', dpi=320)
+plt.savefig(figure_path+"Spectra_without_PH3_single.pdf",format='pdf', dpi=320)
+
+# fig = plt.figure()
+# ax1 = fig.add_subplot(111)
+# fig.set_size_inches(10, 6.45)
+# plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
+# plt.axis([4, 4.5,2,8])
+# for axis in ['top', 'bottom', 'left', 'right']:  # Thicken the frame
+#     ax1.spines[axis].set_linewidth(1.1)
+#
+# d1, = plt.plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
+# r1, = plt.plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=1, label="Winning Model")
+# r2, = plt.plot(noph3['w'], noph3['f'] / 1e-17, color='tab:green', linewidth=0.8, label="Without Ph3", zorder=4)
+#
+# plt.annotate('Data', xy=(4.34, 7.6), color='k', fontsize=20)
+# plt.annotate('Best Fit Model', xy=(4.34, 7.3), color='y', fontsize=20)
+# plt.annotate('Model without PH$_3$', xy=(4.34, 7.0), color='tab:green', fontsize=20)
+#
+# plt.ylabel(r'$ F_{\lambda}$ ($10^{-17}~{\rm Wm^{-2} \mu m^{-1}}$)', fontsize=20)
+# plt.xlabel('Wavelength ($\mu m$)',fontsize=20)
+# ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
+# plt.tight_layout()
+# plt.savefig(figure_path+"Spectra_without_Ph3_single.png",format='png', dpi=320)
 
 # NH3---
+fig, axs = plt.subplots(2, gridspec_kw={'height_ratios': [6, 1],'hspace': 0.1}, sharex=True)
+# Top figure-- spectrum
+axs[0].axis([2.96, 3.05,0,3])
+d1, = axs[0].plot(data['w'], data['f'] / 1e-17, 'k-', linewidth=1.5,label="Wolf 1130C data")
+r1, = axs[0].plot(winner['w'], winner['f'] / 1e-17, 'y-', linewidth=0.5, label="Winning Model")
+r2, = axs[0].plot(nonh3['w'], nonh3['f'] / 1e-17, color='tab:brown', linewidth=0.5, label="Without NH$_3$s", zorder=4)
+axs[0].fill_between(nonh3['w'], nonh3['err1'] / 1e-17, nonh3['err2'] / 1e-17, facecolor='tab:brown', alpha=0.3)
+axs[0].fill_between(winner['w'], winner['err1'] / 1e-17, winner['err2'] / 1e-17, facecolor='y', alpha=0.3)
+
+axs[0].annotate('Wolf 1130C', xy=(2.962, 2.8), color='k', fontsize=15)
+axs[0].annotate('Best Fit Model', xy=(2.962, 2.6), color='y', fontsize=15)
+axs[0].annotate('Model without NH$_3$', xy=(2.962, 2.4), color='tab:brown', fontsize=15)
+
+# Bottom-Reisduals
+axs[1].axis([2.96, 3.05,-1.2,0.5])
+r3, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(winner['f'] / 1e-17), color='y', linewidth=1, label="Without H2s", zorder=2)
+r4, = axs[1].plot(data['w'], (data['f'] / 1e-17)-(nonh3['f'] / 1e-17), color='tab:brown', linewidth=1, label="Without H2s", zorder=1)
+axs[1].fill_between(data['w'], (data['f'] / 1e-17)-(nonh3['err1'] / 1e-17), (data['f'] / 1e-17)-(nonh3['err2'] / 1e-17), facecolor='tab:brown', alpha=0.3)
+
+axs[1].set_ylabel('$\Delta$', fontsize=15)
+axs[1].set_xlabel('Wavelength ($\mu m$)',fontsize=15)
+# ax1.tick_params(axis='both', labelsize=20, length=8, width=1.1)
+plt.tight_layout()
+plt.savefig(figure_path+"Spectra_without_NH3_single.pdf",format='pdf', dpi=320)
+
 fig = plt.figure()
 ax1 = fig.add_subplot(111)
 fig.set_size_inches(10, 6.45)
